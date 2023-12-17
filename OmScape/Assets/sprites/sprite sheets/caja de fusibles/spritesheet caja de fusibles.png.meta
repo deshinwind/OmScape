@@ -1,0 +1,713 @@
+fileFormatVersion: 2
+guid: f6775258d4fa62d4496d1bbc63e4cc7b
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 30
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spritesheet caja de fusibles_0
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 6852
+        width: 349
+        height: 189
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86a56493b01c92f4fa92ce5d2812d4a9
+      internalID: -1632958934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet caja de fusibles_1
+      rect:
+        serializedVersion: 2
+        x: 2701
+        y: 6852
+        width: 349
+        height: 189
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47208c4311a39754ea560fe64d540a3e
+      internalID: -2041389177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet caja de fusibles_2
+      rect:
+        serializedVersion: 2
+        x: 4623
+        y: 6852
+        width: 349
+        height: 189
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2d5213dd4c0935458d836d1ea0cd8ba
+      internalID: -143625412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet caja de fusibles_3
+      rect:
+        serializedVersion: 2
+        x: 6545
+        y: 6852
+        width: 349
+        height: 189
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67c4d02f65d0b2b4f941a5b920d4c016
+      internalID: -1902901335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet caja de fusibles_4
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 5770
+        width: 349
+        height: 189
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59682393243af7d4398ef046dab39a1f
+      internalID: 1769606777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet caja de fusibles_5
+      rect:
+        serializedVersion: 2
+        x: 2701
+        y: 5770
+        width: 349
+        height: 189
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd8b677d4dda57840bbef354da12b942
+      internalID: -381927614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet caja de fusibles_6
+      rect:
+        serializedVersion: 2
+        x: 4623
+        y: 5770
+        width: 349
+        height: 189
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47c5f3675ca80a3428538470347f56ec
+      internalID: 1229617952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet caja de fusibles_7
+      rect:
+        serializedVersion: 2
+        x: 6545
+        y: 5770
+        width: 349
+        height: 189
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 459af7c1c10391449bd60357ca5d6012
+      internalID: -80767775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet caja de fusibles_8
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 4688
+        width: 349
+        height: 189
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e79d8d2246f91145b39e2902ce4c2fd
+      internalID: 1962732673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet caja de fusibles_9
+      rect:
+        serializedVersion: 2
+        x: 2701
+        y: 4688
+        width: 349
+        height: 189
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eea078404b69824a8b25953bbcad7b6
+      internalID: 1723858519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet caja de fusibles_10
+      rect:
+        serializedVersion: 2
+        x: 4623
+        y: 4688
+        width: 349
+        height: 189
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4136a4c7c9b3fa142a13397f0013c2f6
+      internalID: -1233205166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet caja de fusibles_11
+      rect:
+        serializedVersion: 2
+        x: 6545
+        y: 4688
+        width: 349
+        height: 189
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86d0997fc8b6e714a837f256bae3432b
+      internalID: 362158285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet caja de fusibles_12
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 3606
+        width: 349
+        height: 189
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02047bfa278f1074a9bd4e43ac586882
+      internalID: 147075770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet caja de fusibles_13
+      rect:
+        serializedVersion: 2
+        x: 2701
+        y: 3606
+        width: 349
+        height: 189
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdb8beaa5e7de084f867f1c284d4739c
+      internalID: -971080518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet caja de fusibles_14
+      rect:
+        serializedVersion: 2
+        x: 4623
+        y: 3606
+        width: 349
+        height: 189
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5ad6fd91f2efd34288e307348767890
+      internalID: -1832031706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet caja de fusibles_15
+      rect:
+        serializedVersion: 2
+        x: 6545
+        y: 3606
+        width: 349
+        height: 189
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e5986baf6d9e984eb8b4befc9656780
+      internalID: 1915926068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet caja de fusibles_16
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 2524
+        width: 349
+        height: 189
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38352279d908ec84ea5db3328711d164
+      internalID: 653584724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet caja de fusibles_17
+      rect:
+        serializedVersion: 2
+        x: 2701
+        y: 2524
+        width: 349
+        height: 189
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be583a77dd98fd24a965742d164fe55a
+      internalID: 169308465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet caja de fusibles_18
+      rect:
+        serializedVersion: 2
+        x: 4623
+        y: 2524
+        width: 349
+        height: 189
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29a3ab632c577d84b9d817ce203fc8e6
+      internalID: -1234576779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet caja de fusibles_19
+      rect:
+        serializedVersion: 2
+        x: 6545
+        y: 2524
+        width: 349
+        height: 189
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6e0ec162814b4049a04d16fa24bf735
+      internalID: 477934110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet caja de fusibles_20
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 1442
+        width: 349
+        height: 189
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3bbf9e63532d8140b32ae108258c9b5
+      internalID: -1656512972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet caja de fusibles_21
+      rect:
+        serializedVersion: 2
+        x: 2701
+        y: 1442
+        width: 349
+        height: 189
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 155fea6e98f6f8944a6fb97adcb9ee4c
+      internalID: -396946963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet caja de fusibles_22
+      rect:
+        serializedVersion: 2
+        x: 4623
+        y: 1442
+        width: 349
+        height: 189
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7f2e4d754bcb514f936643591e655aa
+      internalID: -327283589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet caja de fusibles_23
+      rect:
+        serializedVersion: 2
+        x: 6545
+        y: 1442
+        width: 349
+        height: 189
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bc66ff93e71cec4181dec145dd0913b
+      internalID: 245627552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet caja de fusibles_24
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 360
+        width: 349
+        height: 189
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40485dbaf6e18e84aad9623497434dba
+      internalID: -1834856248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet caja de fusibles_25
+      rect:
+        serializedVersion: 2
+        x: 2701
+        y: 360
+        width: 349
+        height: 189
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81b05cda252e25c478406dc73892ac11
+      internalID: 1915295906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      spritesheet caja de fusibles_0: -1632958934
+      spritesheet caja de fusibles_1: -2041389177
+      spritesheet caja de fusibles_10: -1233205166
+      spritesheet caja de fusibles_11: 362158285
+      spritesheet caja de fusibles_12: 147075770
+      spritesheet caja de fusibles_13: -971080518
+      spritesheet caja de fusibles_14: -1832031706
+      spritesheet caja de fusibles_15: 1915926068
+      spritesheet caja de fusibles_16: 653584724
+      spritesheet caja de fusibles_17: 169308465
+      spritesheet caja de fusibles_18: -1234576779
+      spritesheet caja de fusibles_19: 477934110
+      spritesheet caja de fusibles_2: -143625412
+      spritesheet caja de fusibles_20: -1656512972
+      spritesheet caja de fusibles_21: -396946963
+      spritesheet caja de fusibles_22: -327283589
+      spritesheet caja de fusibles_23: 245627552
+      spritesheet caja de fusibles_24: -1834856248
+      spritesheet caja de fusibles_25: 1915295906
+      spritesheet caja de fusibles_26: 2007974874
+      spritesheet caja de fusibles_3: -1902901335
+      spritesheet caja de fusibles_4: 1769606777
+      spritesheet caja de fusibles_5: -381927614
+      spritesheet caja de fusibles_6: 1229617952
+      spritesheet caja de fusibles_7: -80767775
+      spritesheet caja de fusibles_8: 1962732673
+      spritesheet caja de fusibles_9: 1723858519
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
