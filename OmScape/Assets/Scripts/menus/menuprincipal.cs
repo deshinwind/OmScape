@@ -7,14 +7,17 @@ public class menuprincipal : MonoBehaviour
 {
     public void jugar()
     {
+        
         Time.timeScale = 1f;
-        SceneManager.LoadScene("H1");
+        SceneManager.LoadScene("h1");
     }
 
     public void Controles()
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("controles");
+
+        
     }
     public void Volver()
     {
