@@ -828,7 +828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff1c5d933582dd546bde81e6b635d4c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menudepausa: {fileID: 0}
+  menudepausa: {fileID: 1822742226}
   ispaused: 0
 --- !u!114 &1822742228
 MonoBehaviour:

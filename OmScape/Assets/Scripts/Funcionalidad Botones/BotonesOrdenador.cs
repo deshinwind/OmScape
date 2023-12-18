@@ -32,7 +32,7 @@ public class BotonesOrdenador : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Cancel"))
+        if (Input.GetMouseButtonDown(1))
         {
             if (notaActiva)
             {

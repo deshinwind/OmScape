@@ -6,6 +6,7 @@ using UnityEngine.U2D;
 
 public class Notas : MonoBehaviour
 {
+    public bool pausado;
     public AlmacenNotas almacen;
 
     private void Start()
@@ -16,6 +17,8 @@ public class Notas : MonoBehaviour
     public void EnviarAlAlmacen()
     {
         almacen.MostrarNota(gameObject.name);
+        Time.timeScale = 0f;
+        pausado = true;
         almacen.ComprobarNota(gameObject.tag, gameObject.name);
         Destroy(gameObject);
     }
