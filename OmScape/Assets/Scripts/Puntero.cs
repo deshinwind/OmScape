@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class Puntero : MonoBehaviour
@@ -36,6 +37,11 @@ public class Puntero : MonoBehaviour
                 else if (objeto.name.Contains("N") || objeto.name.Contains("P"))
                 {
                     objeto.GetComponent<Notas>().EnviarAlAlmacen();
+                }
+                else if (objeto.name.Equals("LinternaObjeto"))
+                {
+                    print(objeto.name);
+                    objeto.GetComponent<recolectable>().Linterna();
                 }
                 else
                 {

@@ -498,7 +498,7 @@ GameObject:
   - component: {fileID: 547389584}
   m_Layer: 0
   m_Name: Barrena
-  m_TagString: Untagged
+  m_TagString: Barrena
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1534,6 +1534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3ecfd29ec5413a42a41e3c8240d7832, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  panel: {fileID: 0}
 --- !u!1 &1827712284
 GameObject:
   m_ObjectHideFlags: 0

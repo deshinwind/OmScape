@@ -25,5 +25,9 @@ public class recolectable : MonoBehaviour
     public void Linterna()
     {
         inventario.linterna = true;
+        
+        GameObject.Find("Linterna").transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
+
+        Destroy(gameObject);
     }
 }

@@ -94,4 +94,8 @@ public class ButtonFuncionality : MonoBehaviour
     {
         SceneManager.LoadScene("panel");
     }
+    public void ButtonCajon()
+    {
+        SceneManager.LoadScene("cajon");
+    }
 }

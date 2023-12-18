@@ -579,7 +579,7 @@ GameObject:
   - component: {fileID: 315460945}
   - component: {fileID: 315460946}
   m_Layer: 0
-  m_Name: Linterna
+  m_Name: LinternaObjeto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -978,6 +978,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec4ae45e04e89445a0625c99d485c43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pausado: 0
   almacen: {fileID: 0}
 --- !u!212 &735969936
 SpriteRenderer:

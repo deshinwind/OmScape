@@ -16,7 +16,7 @@ public class Inventario : MonoBehaviour
 
     public AlmacenNotas almacen;
 
-    private int tamañoMaximo = 6;
+    public int tamañoMaximo = 6;
 
     public Sprite foto;
     public Sprite ganzua;
@@ -154,6 +154,13 @@ public class Inventario : MonoBehaviour
                 if (objeto.transform.GetChild(i).name.Equals(slotdeitems[j].itemName))
                 {
                     numeroObjeto.Add(i);
+                }
+                if (objeto.transform.GetChild(i).name.Equals("LinternaObjeto"))
+                {
+                    if (linterna)
+                    {
+                        numeroObjeto.Add(i);
+                    }
                 }
             }
         }
