@@ -18,7 +18,8 @@ public class recolectable : MonoBehaviour
         inventario.AddItem(gameObject.name, sprite, gameObject.tag);
         if (inventario.recolectado)         //Comprueba que se ha enviado al inventario antes de eliminarlo
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
+            //Destroy(gameObject);
         }
     }
 
@@ -28,6 +29,7 @@ public class recolectable : MonoBehaviour
         
         GameObject.Find("Linterna").transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
 
-        Destroy(gameObject);
+        gameObject.SetActive(false);
+        //Destroy(gameObject);
     }
 }

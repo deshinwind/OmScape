@@ -192,6 +192,13 @@ MonoBehaviour:
   - P4
   - P5
   - NotaFalsa
+  - Fusible Azul
+  - Fusible Rojo
+  - Fusible Verde
+  - Fusible Blanco
+  - Fusible Negro
+  - Fusible Amarillo
+  - doble
   correcto: 0
 --- !u!1 &117159056
 GameObject:

@@ -34,14 +34,17 @@ public class Puntero : MonoBehaviour
                 {
                     objeto.GetComponent<Notas>().MostrarNotaFalsa();
                 }
-                else if (objeto.name.Contains("N") || objeto.name.Contains("P"))
+                else if (objeto.name.Length == 2)
                 {
                     objeto.GetComponent<Notas>().EnviarAlAlmacen();
                 }
                 else if (objeto.name.Equals("LinternaObjeto"))
                 {
-                    print(objeto.name);
                     objeto.GetComponent<recolectable>().Linterna();
+                }
+                else if (objeto.name.Equals("doble"))
+                {
+                    objeto.GetComponent<doblefondo>().Abrir();
                 }
                 else
                 {

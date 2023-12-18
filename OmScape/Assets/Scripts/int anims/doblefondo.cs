@@ -10,6 +10,8 @@ public class doblefondo : MonoBehaviour
     public Sprite doblefondosprite;
     private Animator animator;
 
+    public GameObject objetos;
+    public GameObject notas;
     public Inventario inventario;
 
     public void Awake()
@@ -20,32 +22,42 @@ public class doblefondo : MonoBehaviour
     private void Start()
     {
         inventario = GameObject.Find("Canvas2").GetComponent<Inventario>();
-    }
-
-    void Update()
-    {
-        if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
+        if (inventario.dobleFondo)
         {
-            for (int i = 0; i < inventario.tamañoMaximo; i++)
-            {
-                if (inventario.slotdeitems[i].thisItemSelected)
-                {
-                    if (inventario.slotdeitems[i].CompareTag("Barrena"))
-                    {
-                        animator.SetTrigger("doblefondotrigger");
-                        Destroy(GetComponent<BoxCollider2D>());
-                        Invoke("Prueba", 0.15f);
-                    }
-                }
-            }
-
+            objetos.SetActive(true);
+            notas.SetActive(true);
         }
     }
-    void Prueba()
+
+    public void Abrir()
+    {
+        for (int i = 0; i < inventario.tamañoMaximo; i++)
+        {
+            if (inventario.slotdeitems[i].thisItemSelected)
+            {
+                if (inventario.slotdeitems[i].CompareTag("Barrena"))
+                {
+                    animator.SetTrigger("doblefondotrigger");
+                    Destroy(GetComponent<BoxCollider2D>());
+                    Invoke("AnimacionCajon", 0.15f);
+                    inventario.slotdeitems[i].RemoveItem();
+                    Invoke("ActivarObjetos", 1f);
+                }
+            }
+        }
+    }
+
+    void AnimacionCajon()
     {
         animator.SetTrigger("doblefondotrigger");
         GameObject.Find("doble").GetComponent<SpriteRenderer>().sprite = doblefondosprite;
+    }
 
+    public void ActivarObjetos()
+    {
+        objetos.SetActive(true);
+        notas.SetActive(true);
+        inventario.dobleFondo = true;
     }
 
 }

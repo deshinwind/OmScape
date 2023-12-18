@@ -27,6 +27,7 @@ public class Inventario : MonoBehaviour
     private List<int> numeroNota;
 
     public bool linterna;
+    public bool dobleFondo;
 
     private void Start()
     {

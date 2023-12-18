@@ -435,6 +435,8 @@ MonoBehaviour:
   - {fileID: 1636334397}
   - {fileID: 599123911}
   posicionBotones: []
+  objetos: []
+  notas: []
 --- !u!4 &506175578
 Transform:
   m_ObjectHideFlags: 0
@@ -2359,6 +2361,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3ecfd29ec5413a42a41e3c8240d7832, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  panel: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

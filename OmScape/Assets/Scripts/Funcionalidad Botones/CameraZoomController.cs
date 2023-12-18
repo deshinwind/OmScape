@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class CameraZoomController : MonoBehaviour
@@ -19,11 +20,91 @@ public class CameraZoomController : MonoBehaviour
     private int n = 0;
     private int numeroBotones;
 
+    public GameObject[] objetos;
+    public GameObject[] notas;
+
     void Start()
     {
         cam = Camera.main;
         numeroBotones = botones.Length;
         PosicionBotones(numeroBotones);
+
+        if (SceneManager.GetActiveScene().name.Equals("H2"))
+        {
+            objetos = new GameObject[3];
+            objetos[0] = GameObject.Find("Coche 1");
+            objetos[1] = GameObject.Find("Coche 2");
+            objetos[2] = GameObject.Find("Coche 3");
+            notas = new GameObject[1];
+            notas[0] = GameObject.Find("N1");
+        }
+        else if (SceneManager.GetActiveScene().name.Equals("H3"))
+        {
+            objetos = new GameObject[1];
+            objetos[0] = GameObject.Find("Comic 1");
+        }
+        else if (SceneManager.GetActiveScene().name.Equals("H4"))
+        {
+            objetos = new GameObject[1];
+            objetos[0] = GameObject.Find("Clip");
+            notas = new GameObject[2];
+            notas[0] = GameObject.Find("P3");
+            notas[1] = GameObject.Find("N2");
+        }
+
+    }
+
+    private void Update()
+    {
+        if (SceneManager.GetActiveScene().name.Equals("H2"))
+        {
+            if (zoomCheck[4])
+            {
+                if (objetos[0].activeSelf) { objetos[0].GetComponent<BoxCollider2D>().enabled = true; }
+                if (objetos[1].activeSelf) { objetos[1].GetComponent<BoxCollider2D>().enabled = true; }
+                if (objetos[2].activeSelf) { objetos[2].GetComponent<BoxCollider2D>().enabled = true; }
+            }
+            else if (zoomCheck[1])
+            {
+                if (notas[0].activeSelf) { notas[0].GetComponent<BoxCollider2D>().enabled = true; }
+            }
+            else
+            {
+                if (objetos[0].activeSelf) { objetos[0].GetComponent<BoxCollider2D>().enabled = false; }
+                if (objetos[1].activeSelf) { objetos[1].GetComponent<BoxCollider2D>().enabled = false; }
+                if (objetos[2].activeSelf) { objetos[2].GetComponent<BoxCollider2D>().enabled = false; }
+                if (notas[0].activeSelf) { notas[0].GetComponent<BoxCollider2D>().enabled = false; }
+            }
+        }
+        else if (SceneManager.GetActiveScene().name.Equals("H3"))
+        {
+            if (zoomCheck[3])
+            {
+                if (objetos[0].activeSelf) { objetos[0].GetComponent<BoxCollider2D>().enabled = true; }
+            }
+            else
+            {
+                if (objetos[0].activeSelf) { objetos[0].GetComponent<BoxCollider2D>().enabled = false; }
+            }
+        }
+        else if (SceneManager.GetActiveScene().name.Equals("H4"))
+        {
+            if (zoomCheck[3])
+            {
+                if (objetos[0].activeSelf) { objetos[0].GetComponent<BoxCollider2D>().enabled = true; }
+                if (notas[1].activeSelf) { notas[1].GetComponent<BoxCollider2D>().enabled = true; }
+            }
+            else if (zoomCheck[6])
+            {
+                if (notas[0].activeSelf) { notas[0].GetComponent<BoxCollider2D>().enabled = true; }
+            }
+            else
+            {
+                if (objetos[0].activeSelf) { objetos[0].GetComponent<BoxCollider2D>().enabled = false; }
+                if (notas[0].activeSelf) { notas[0].GetComponent<BoxCollider2D>().enabled = false; }
+                if (notas[1].activeSelf) { notas[1].GetComponent<BoxCollider2D>().enabled = false; }
+            }
+        }
     }
 
     public void LateUpdate()
@@ -40,7 +121,7 @@ public class CameraZoomController : MonoBehaviour
                 }
             }
 
-            if (Input.GetKeyDown(KeyCode.Escape))
+            if (Input.GetMouseButtonDown(1))
             {
                 zoomCheck[n] = false;
                 n = 0;
