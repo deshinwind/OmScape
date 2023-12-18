@@ -19,4 +19,9 @@ public class Notas : MonoBehaviour
         almacen.ComprobarNota(gameObject.tag, gameObject.name);
         Destroy(gameObject);
     }
+
+    public void MostrarNotaFalsa()
+    {
+        almacen.MostrarNota(gameObject.name);
+    }
 }

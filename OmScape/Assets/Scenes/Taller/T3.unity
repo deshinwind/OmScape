@@ -613,7 +613,7 @@ GameObject:
   - component: {fileID: 2069023241}
   m_Layer: 0
   m_Name: P4
-  m_TagString: Notas
+  m_TagString: Posesiones
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -998,5 +998,5 @@ SceneRoots:
   - {fileID: 2114550169}
   - {fileID: 1503873755}
   - {fileID: 1847696046}
-  - {fileID: 251914744}
   - {fileID: 833617245}
+  - {fileID: 251914744}

@@ -12,6 +12,7 @@ public class AlmacenNotas : MonoBehaviour
 
     public Sprite[] narrativa;
     public Sprite[] posesion;
+    public Sprite notaFalsa;
 
     public GameObject nota;
     public GameObject texto;
@@ -24,10 +25,15 @@ public class AlmacenNotas : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape) && mostrandoNota)
         {
+
+            if (!nota.name.Equals("NotaFalsa"))
+            {
+                texto.SetActive(true);
+                Invoke("Texto", 3f);
+            }
+
             nota.SetActive(false);
             mostrandoNota = false;
-            texto.SetActive(true);
-            Invoke("Texto", 3f);
         }
     }
 
@@ -62,22 +68,22 @@ public class AlmacenNotas : MonoBehaviour
     {
         switch (nombre)
         {
-            case "P1":
+            case "P0":
                 notasPosesiones[0] = true;
                 break;
-            case "P2":
+            case "P1":
                 notasPosesiones[1] = true;
                 break;
-            case "P3":
+            case "P2":
                 notasPosesiones[2] = true;
                 break;
-            case "P4":
+            case "P3":
                 notasPosesiones[3] = true;
                 break;
-            case "P5":
+            case "P4":
                 notasPosesiones[4] = true;
                 break;
-            case "P6":
+            case "P5":
                 notasPosesiones[5] = true;
                 break;
         }
@@ -87,7 +93,11 @@ public class AlmacenNotas : MonoBehaviour
     {
         mostrandoNota = true;
         nota.SetActive(true);
-        if (nombre.Contains("N"))
+        if (nombre.Equals("NotaFalsa"))
+        {
+            nota.GetComponent<Image>().sprite = notaFalsa;
+        }
+        else if (nombre.Contains("N"))
         {
             switch (nombre)
             {
@@ -112,22 +122,22 @@ public class AlmacenNotas : MonoBehaviour
         {
             switch (nombre)
             {
-                case "P1":
+                case "P0":
                     nota.GetComponent<Image>().sprite = posesion[0];
                     break;
-                case "P2":
+                case "P1":
                     nota.GetComponent<Image>().sprite = posesion[1];
                     break;
-                case "P3":
+                case "P2":
                     nota.GetComponent<Image>().sprite = posesion[2];
                     break;
-                case "P4":
+                case "P3":
                     nota.GetComponent<Image>().sprite = posesion[3];
                     break;
-                case "P5":
+                case "P4":
                     nota.GetComponent<Image>().sprite = posesion[4];
                     break;
-                case "P6":
+                case "P5":
                     nota.GetComponent<Image>().sprite = posesion[5];
                     break;
             }

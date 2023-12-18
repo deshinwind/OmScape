@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 179782966}
   m_Layer: 0
   m_Name: P2
-  m_TagString: Notas
+  m_TagString: Posesiones
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

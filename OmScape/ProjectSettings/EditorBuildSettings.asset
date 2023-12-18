@@ -48,12 +48,9 @@ EditorBuildSettings:
     path: "Assets/Scenes/Habitaci\xF3n/H2Objetos/Mesita izquierda.unity"
     guid: b6e603fb5adb0b54ab1efff1082684ab
   - enabled: 1
-    path: "Assets/Scenes/Habitaci\xF3n/H2Objetos/Cama.unity"
-    guid: 8ec8cc46d1f1f2f449deccbfedd605b2
-  - enabled: 1
-    path: "Assets/Scenes/Habitaci\xF3n/H3Objetos/Escritorio enterio.unity"
-    guid: 6944c6509c2a5be4085e12f78a70fd5b
-  - enabled: 1
     path: "Assets/Scenes/Habitaci\xF3n/H3Objetos/Escritorio arriba.unity"
     guid: 966dbca70ad7aac4aaa5ad46a6b2df87
+  - enabled: 1
+    path: "Assets/Scenes/Habitaci\xF3n/H2Objetos/panel.unity"
+    guid: 31df52771bbad9d4982041fc1f84f7be
   m_configObjects: {}

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Inventario : MonoBehaviour
@@ -10,7 +11,10 @@ public class Inventario : MonoBehaviour
     [SerializeField] private slotdeitems[] slotdeitems;
     [SerializeField] private Crafteo crafteo;
 
-    public GameObject prueba;
+    public GameObject objeto;
+    public GameObject nota;
+
+    public AlmacenNotas almacen;
 
     private int tamañoMaximo = 6;
 
@@ -19,7 +23,8 @@ public class Inventario : MonoBehaviour
     
     public static Inventario instancia;
 
-    private List<int> numeros = new List<int>();
+    private List<int> numeroObjeto;
+    private List<int> numeroNota;
 
     private void Start()
     {
@@ -70,28 +75,90 @@ public class Inventario : MonoBehaviour
             inventarioActivo = true;
         }
     }
-    public void ComprobarRepetidos()    //Comprueba si los objetos que están en la escena ya han sido recogidos y los elimina
-    {
-        prueba = GameObject.Find("Objetos");
 
-        for (int i = 0; i < prueba.transform.childCount; i++)
+    public void ComprobarFotosRepetidas()
+    {
+        numeroNota = new List<int>();
+        nota = GameObject.Find("Notas");
+
+        for (int i = 0; i < nota.transform.childCount; i++)
         {
-            for (int j = 0; j < tamañoMaximo; j++)
+            if (nota.transform.GetChild(i).name.Contains("P"))
             {
-                if ((prueba.transform.GetChild(i).CompareTag("foto") && crafteo.fotoCrafteada)      //Comprueba si la foto o la ganzua han sido crafteadas
-                    || (prueba.transform.GetChild(i).CompareTag("ganzua") && crafteo.ganzuaCrafteada))
+                switch (nota.transform.GetChild(i).name)
                 {
-                    numeros.Add(i);
+                    case "P0":
+                        if (almacen.notasPosesiones[0]) { numeroNota.Add(i); }
+                        break;
+                    case "P1":
+                        if (almacen.notasPosesiones[1]) { numeroNota.Add(i); }
+                        break;
+                    case "P2":
+                        if (almacen.notasPosesiones[2]) { numeroNota.Add(i); }
+                        break;
+                    case "P3":
+                        if (almacen.notasPosesiones[3]) { numeroNota.Add(i); }
+                        break;
+                    case "P4":
+                        if (almacen.notasPosesiones[4]) { numeroNota.Add(i); }
+                        break;
+                    case "P5":
+                        if (almacen.notasPosesiones[5]) { numeroNota.Add(i); }
+                        break;
                 }
-                if (prueba.transform.GetChild(i).name.Equals(slotdeitems[j].itemName))
+            }
+            else if (nota.transform.GetChild(i).name.Contains("N"))
+            {
+                switch (nota.transform.GetChild(i).name)
                 {
-                    numeros.Add(i);
+                    case "N0":
+                        if (almacen.notasNarrativa[0]) { numeroNota.Add(i); }
+                        break;
+                    case "N1":
+                        if (almacen.notasNarrativa[1]) { numeroNota.Add(i); }
+                        break;
+                    case "N2":
+                        if (almacen.notasNarrativa[2]) { numeroNota.Add(i); }
+                        break;
+                    case "N3":
+                        if (almacen.notasNarrativa[3]) { numeroNota.Add(i); }
+                        break;
+                    case "N4":
+                        if (almacen.notasNarrativa[4]) { numeroNota.Add(i); }
+                        break;
                 }
             }
         }
-        for (int i = numeros.Count - 1; i >= 0; i--)
+        for (int i = 0; i < numeroNota.Count; i++)
         {
-            Destroy(prueba.transform.GetChild(numeros[i]).gameObject);
+            nota.transform.GetChild(numeroNota[i]).gameObject.SetActive(false);
+        }
+    }
+
+    public void ComprobarRepetidos()    //Comprueba si los objetos que están en la escena ya han sido recogidos y los elimina
+    {
+        numeroObjeto = new List<int>();
+        objeto = GameObject.Find("Objetos");
+
+        for (int i = 0; i < objeto.transform.childCount; i++)
+        {
+            for (int j = 0; j < tamañoMaximo; j++)
+            {
+                if ((objeto.transform.GetChild(i).CompareTag("foto") && crafteo.fotoCrafteada)      //Comprueba si la foto o la ganzua han sido crafteadas
+                    || (objeto.transform.GetChild(i).CompareTag("ganzua") && crafteo.ganzuaCrafteada))
+                {
+                    numeroObjeto.Add(i);
+                }
+                if (objeto.transform.GetChild(i).name.Equals(slotdeitems[j].itemName))
+                {
+                    numeroObjeto.Add(i);
+                }
+            }
+        }
+
+        for (int i = 0; i < numeroObjeto.Count; i++)
+        {
+            objeto.transform.GetChild(numeroObjeto[i]).gameObject.SetActive(false);
         }
     }
     public void AddItem(string itemname, Sprite itemsprite, string valorTag)    //Añade items del entorno al inventario

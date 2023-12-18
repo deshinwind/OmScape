@@ -29,13 +29,13 @@ public class Puntero : MonoBehaviour
             {
                 objeto = GameObject.Find(hit.transform.name);
 
-                if (objeto.CompareTag("Notas"))
+                if (objeto.name.Equals("NotaFalsa"))
+                {
+                    objeto.GetComponent<Notas>().MostrarNotaFalsa();
+                }
+                else if (objeto.name.Contains("N") || objeto.name.Contains("P"))
                 {
                     objeto.GetComponent<Notas>().EnviarAlAlmacen();
-                }
-                else if (objeto.name.Equals("Nota falsa"))
-                {
-
                 }
                 else
                 {

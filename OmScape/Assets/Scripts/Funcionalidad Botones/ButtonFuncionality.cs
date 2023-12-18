@@ -8,6 +8,7 @@ public class ButtonFuncionality : MonoBehaviour
     private void Start()
     {
         FindObjectOfType<Inventario>().ComprobarRepetidos();       //Llamamos a la comprobación de los objetos repetidos al cambiar de escena
+        FindObjectOfType<Inventario>().ComprobarFotosRepetidas();
     }
     public void ButtonExit()
     {
@@ -74,18 +75,13 @@ public class ButtonFuncionality : MonoBehaviour
         SceneManager.LoadScene("Mesita derecha");
     }
 
-    public void ButtonCama()
-    {
-        SceneManager.LoadScene("Cama");
-    }
-
-    public void ButtonEscritorioEntero()
-    {
-        SceneManager.LoadScene("Escritorio enterio");
-    }
-
     public void ButtonEscritorioArriba()
     {
         SceneManager.LoadScene("Escritorio arriba");
+    }
+
+    public void ButtonSensor()
+    {
+        SceneManager.LoadScene("panel");
     }
 }

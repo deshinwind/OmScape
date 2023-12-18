@@ -4,7 +4,6 @@ using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-using UnityEngine.UIElements;
 
 public class CameraZoomController : MonoBehaviour
 {
@@ -20,21 +19,11 @@ public class CameraZoomController : MonoBehaviour
     private int n = 0;
     private int numeroBotones;
 
-    public GameObject baul;
-
     void Start()
     {
         cam = Camera.main;
         numeroBotones = botones.Length;
         PosicionBotones(numeroBotones);
-    }
-
-    private void Update()
-    {
-        if (zoomCheck[1])
-        {
-            baul.SetActive(true);
-        }
     }
 
     public void LateUpdate()
@@ -43,6 +32,14 @@ public class CameraZoomController : MonoBehaviour
         
         if (!botonesPanel.activeInHierarchy)
         {
+            if (!(EventSystem.current.currentSelectedGameObject == null))
+            {
+                if (EventSystem.current.currentSelectedGameObject.name.Equals("H2Cama"))
+                {
+                    Invoke("ActivarBaul", 0.35f);
+                }
+            }
+
             if (Input.GetKeyDown(KeyCode.Escape))
             {
                 zoomCheck[n] = false;
@@ -111,5 +108,10 @@ public class CameraZoomController : MonoBehaviour
         {
             posicionBotones[i] = botones[i].transform.position;
         }
+    }
+
+    private void ActivarBaul()
+    {
+        GameObject.Find("Baul").GetComponent<Button>().enabled = true;
     }
 }
