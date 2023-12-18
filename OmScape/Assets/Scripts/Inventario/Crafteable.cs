@@ -1,5 +1,8 @@
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.Diagnostics;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class Crafteable : MonoBehaviour, IPointerClickHandler
 {
@@ -7,6 +10,8 @@ public class Crafteable : MonoBehaviour, IPointerClickHandler
     [SerializeField] private Sprite sprite;
 
     private Crafteo crafteo;
+    private panel panel;
+    private AlmacenSensor almacen;
 
     public slotdeitems slot;
 
@@ -17,13 +22,34 @@ public class Crafteable : MonoBehaviour, IPointerClickHandler
     void Start()
     {
         crafteo = GameObject.Find("Canvas2").GetComponent<Crafteo>();
+
+        if (SceneManager.GetActiveScene().name.Equals("panel"))
+        {
+            almacen = GameObject.Find("Canvas").GetComponent<AlmacenSensor>();
+            panel = GameObject.Find("Canvas").GetComponent<panel>();
+        }
+    }
+
+    private void Update()
+    {
+        if (panel != null && !crafteo.crafteoActivo)
+        {
+
+        }
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
         if (eventData.button == PointerEventData.InputButton.Left)
         {
-            EnviarACrafteo();
+            if (panel != null && !crafteo.crafteoActivo)
+            {
+                EnviarAEscaner();
+            }
+            else
+            {
+                EnviarACrafteo();
+            }
         }
     }
     public void EnviarACrafteo()    //Envia el item del inventario al crafteo
@@ -45,6 +71,14 @@ public class Crafteable : MonoBehaviour, IPointerClickHandler
             {
                 print("la mamaste");
             }
+        }
+    }
+
+    public void EnviarAEscaner()
+    {
+        if (slot.thisItemSelected && slot.isfull)
+        {
+            almacen.AddItemEscaner(gameObject.GetComponent<slotdeitems>().itemName, slot.itemsprite, gameObject.tag);
         }
     }
 }

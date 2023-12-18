@@ -19,8 +19,8 @@ public class Crafteo : MonoBehaviour
 
     [SerializeField] private Inventario inventario;
 
-    private readonly string tagGanzua = "ganzua";
-    private readonly string tagFoto = "foto";
+    private readonly string tagGanzua = "GanzuaCompleta";
+    private readonly string tagFoto = "Sensor";
 
     private readonly int tamañoMaximo = 2;
 
@@ -82,7 +82,7 @@ public class Crafteo : MonoBehaviour
         }
     }
 
-    //PRUEBA DE CRAFTEO (O MAS BIEN EL PROYECTO (MAS AUN LA IDEA  DE LA CUAL PARTIR))
+    //PRUEBA DE CRAFTEO
     public void ComprobarSiCrafteo()
     {
         //Comprueba si los objetos que estan en el crafteo se pueden craftear

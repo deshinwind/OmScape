@@ -11,6 +11,8 @@ TagManager:
   - Posesiones
   - Boton
   - Inactivo
+  - Sensor
+  - GanzuaCompleta
   layers:
   - Default
   - TransparentFX

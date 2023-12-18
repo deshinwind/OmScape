@@ -199,7 +199,7 @@ public class Inventario : MonoBehaviour
     }
     public void AddObjetoCrafteado(string itemname, string valorTag)    //Añade el item crafteado al inventario
     {
-        if (valorTag.Equals("foto"))
+        if (valorTag.Equals("Sensor"))
         {
             for (int i = 0; i < tamañoMaximo; i++)
             {
