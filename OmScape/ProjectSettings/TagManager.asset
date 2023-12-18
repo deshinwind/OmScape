@@ -9,6 +9,7 @@ TagManager:
   - Inventario
   - Narrativa
   - Posesiones
+  - Notas
   layers:
   - Default
   - TransparentFX

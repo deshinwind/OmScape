@@ -6,6 +6,9 @@ using UnityEngine;
 public class Puntero : MonoBehaviour
 {
     public GameObject objeto;
+    public string[] listaObjetos;
+    public bool correcto;
+
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -18,14 +21,41 @@ public class Puntero : MonoBehaviour
     {
         RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
 
-        if (hit.transform.name.Equals("Linterna"))
+        if (hit.collider != null)
         {
-            objeto.GetComponent<recolectable>().EnviarAInventario();
-            Debug.Log("Target Position: " + hit.collider.gameObject.transform.position);
+            ComprobarNombreObjeto(hit);
+
+            if (correcto)
+            {
+                objeto = GameObject.Find(hit.transform.name);
+
+                if (objeto.CompareTag("Notas"))
+                {
+                    objeto.GetComponent<Notas>().EnviarAlAlmacen();
+                }
+                else if (objeto.name.Equals("Nota falsa"))
+                {
+
+                }
+                else
+                {
+                    objeto.GetComponent<recolectable>().EnviarAInventario();
+                }
+                Debug.Log("Target Position: " + hit.collider.gameObject.transform.position);
+            }
         }
-        else
+    }
+
+    private void ComprobarNombreObjeto(RaycastHit2D hit)
+    {
+        correcto = false;
+
+        for (int i = 0; i < listaObjetos.Length; i++)
         {
-            print("FY");
+            if (listaObjetos[i].Equals(hit.transform.name))
+            {
+                correcto = true;
+            }
         }
     }
 }
