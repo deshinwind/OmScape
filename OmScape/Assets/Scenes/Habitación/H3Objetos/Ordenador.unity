@@ -139,7 +139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &13187726
 Transform:
   m_ObjectHideFlags: 0
@@ -290,7 +290,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 62084999}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1448700445}
+        m_TargetAssemblyTypeName: BotonesOrdenador, Assembly-CSharp
+        m_MethodName: DesactivarNota
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &62084999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -491,13 +503,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1448700439}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1448700445}
+        m_TargetAssemblyTypeName: BotonesOrdenador, Assembly-CSharp
+        m_MethodName: NotaNar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -554,12 +566,12 @@ GameObject:
   - component: {fileID: 180074985}
   - component: {fileID: 180074984}
   m_Layer: 5
-  m_Name: reg 2
+  m_Name: P1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &180074983
 RectTransform:
   m_ObjectHideFlags: 0
@@ -623,7 +635,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 180074985}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1448700445}
+        m_TargetAssemblyTypeName: BotonesOrdenador, Assembly-CSharp
+        m_MethodName: NotaPos
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &180074985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -675,7 +699,7 @@ GameObject:
   - component: {fileID: 183671102}
   - component: {fileID: 183671101}
   m_Layer: 5
-  m_Name: CarpetaPosesiones
+  m_Name: CarpetaPosesion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -811,7 +835,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &229803061
 Transform:
   m_ObjectHideFlags: 0
@@ -1026,7 +1050,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "r\u0326\u031C\u035B\u0312\u0308\u0301\u0351\u032A\u0330\u033B\u0353\u0353\u0305\u031A\u0302\u0366\u030D\u035B\u033E\u0365\u0348\u035C\u031C\u0345_\u0325\u030Ee\u0323\u030F\u0304\u032C\u0300\u034B\u034B\u030B\u0360\u031F\u036C\u033A\u0355g\u0318\u0355\u0347\u0359\u0335\u0320\u036E\u032D\u0368\u0302\u0325\u0368\u033A\u0349\u0346\u033B\u0301\u036A\u0334i\u0311\u0322\u0357\u036B\u031F\u0306\u0300\u0360\u032B\u036F\u0334\u0369\u033B\u0350\u0336\u033A\u036B\u032Fs\u0363\u0351\u0304\u030D\u0313\u0308\u0301\u034E\u033A\u0357\u032B\u036Ct\u0335\u0364\u0366\u0350\u034B\u030B\u0365\u033C\u031C\u034E\u036C\u030D\u033E\u036F\u0338\u0333\u035F\u0362\u0314\u034B\u0336\u0322\u036B\u0334\u035C\u0364r\u0308\u0315\u0350_\u0313\u033F\u0345\u0323\u036C\u0309\u0353\u0357\u0330\u035B_\u0363\u0337\u034D\u0358\u0302o\u0353\u033F\u0349\u0351\u0349\u0337\u036E\u032E7\u036F\u031A\u0349\u0325\u034E\u030B\u0331\u030D\u032A\u033D\u0357\u031A\u036F\u0300\u0331\u0338\u0351\u032B\u0306\u0309\u0323\u0325\u0353\u034B\u0319"
+  m_Text: Ultima entrada
 --- !u!222 &274077268
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1200,7 +1224,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &360437219
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1219,7 +1243,6 @@ RectTransform:
   - {fileID: 1761677812}
   - {fileID: 887211664}
   - {fileID: 1541016915}
-  - {fileID: 1652878768}
   m_Father: {fileID: 1282869097}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1387,7 +1410,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 416875792}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1448700445}
+        m_TargetAssemblyTypeName: BotonesOrdenador, Assembly-CSharp
+        m_MethodName: DesactivarNota
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &416875792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1807,7 +1842,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &506461904
 Transform:
   m_ObjectHideFlags: 0
@@ -1958,7 +1993,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 519469590}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1448700445}
+        m_TargetAssemblyTypeName: BotonesOrdenador, Assembly-CSharp
+        m_MethodName: DesactivarNota
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &519469590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2078,7 +2125,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 522408296}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1448700445}
+        m_TargetAssemblyTypeName: BotonesOrdenador, Assembly-CSharp
+        m_MethodName: DesactivarNota
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &522408296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2130,12 +2189,12 @@ GameObject:
   - component: {fileID: 532420271}
   - component: {fileID: 532420270}
   m_Layer: 5
-  m_Name: reg 4
+  m_Name: P3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &532420269
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2199,7 +2258,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 532420271}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1448700445}
+        m_TargetAssemblyTypeName: BotonesOrdenador, Assembly-CSharp
+        m_MethodName: NotaPos
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &532420271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2249,12 +2320,12 @@ GameObject:
   - component: {fileID: 537815665}
   - component: {fileID: 537815666}
   m_Layer: 0
-  m_Name: registro 3
+  m_Name: registro 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &537815665
 Transform:
   m_ObjectHideFlags: 0
@@ -2495,12 +2566,12 @@ GameObject:
   - component: {fileID: 660393661}
   - component: {fileID: 660393660}
   m_Layer: 5
-  m_Name: N0 2
+  m_Name: N1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &660393659
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2564,7 +2635,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 660393661}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1448700445}
+        m_TargetAssemblyTypeName: BotonesOrdenador, Assembly-CSharp
+        m_MethodName: NotaNar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &660393661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2616,12 +2699,12 @@ GameObject:
   - component: {fileID: 748498943}
   - component: {fileID: 748498942}
   m_Layer: 5
-  m_Name: reg 5
+  m_Name: P4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &748498941
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2686,13 +2769,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1448700439}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1448700445}
+        m_TargetAssemblyTypeName: BotonesOrdenador, Assembly-CSharp
+        m_MethodName: NotaPos
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2969,7 +3052,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 850291658}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1448700445}
+        m_TargetAssemblyTypeName: BotonesOrdenador, Assembly-CSharp
+        m_MethodName: DesactivarNota
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &850291658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3019,12 +3114,12 @@ GameObject:
   - component: {fileID: 887211664}
   - component: {fileID: 887211665}
   m_Layer: 0
-  m_Name: registro 5
+  m_Name: registro 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &887211664
 Transform:
   m_ObjectHideFlags: 0
@@ -3105,12 +3200,12 @@ GameObject:
   - component: {fileID: 906898039}
   - component: {fileID: 906898040}
   m_Layer: 0
-  m_Name: registro 1
+  m_Name: registro 0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &906898039
 Transform:
   m_ObjectHideFlags: 0
@@ -3272,12 +3367,12 @@ GameObject:
   - component: {fileID: 954140601}
   - component: {fileID: 954140600}
   m_Layer: 5
-  m_Name: reg 3
+  m_Name: P2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &954140599
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3341,7 +3436,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 954140601}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1448700445}
+        m_TargetAssemblyTypeName: BotonesOrdenador, Assembly-CSharp
+        m_MethodName: NotaPos
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &954140601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3611,7 +3718,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1071312351}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1448700445}
+        m_TargetAssemblyTypeName: BotonesOrdenador, Assembly-CSharp
+        m_MethodName: DesactivarNota
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1071312351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3731,7 +3850,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1105291534}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1448700445}
+        m_TargetAssemblyTypeName: BotonesOrdenador, Assembly-CSharp
+        m_MethodName: DesactivarNota
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1105291534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3783,12 +3914,12 @@ GameObject:
   - component: {fileID: 1133511653}
   - component: {fileID: 1133511652}
   m_Layer: 5
-  m_Name: reg 7
+  m_Name: N4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1133511651
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3798,15 +3929,15 @@ RectTransform:
   m_GameObject: {fileID: 1133511650}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.99980867, y: 0.99980867, z: 0.99980867}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 274077266}
-  m_Father: {fileID: 1843832847}
+  m_Father: {fileID: 1468075038}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 95.4, y: -96.2}
+  m_AnchoredPosition: {x: -241.30002, y: -96.18159}
   m_SizeDelta: {x: 107.59, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1133511652
@@ -3852,7 +3983,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1133511653}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1448700445}
+        m_TargetAssemblyTypeName: BotonesOrdenador, Assembly-CSharp
+        m_MethodName: NotaNar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1133511653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3917,8 +4060,8 @@ Transform:
   m_GameObject: {fileID: 1262005416}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.07, y: -4.19, z: -4080.65}
-  m_LocalScale: {x: 39.61947, y: 38.05062, z: 43.962234}
+  m_LocalPosition: {x: 4.35, y: -4.65, z: -4080.65}
+  m_LocalScale: {x: 37.66227, y: 36.53263, z: 43.962234}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1565799662}
@@ -3964,7 +4107,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1ea42cd2c230b02458dcbc907707bca0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8cc891accdcaa2948a9da7451b6bd953, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3986,12 +4129,12 @@ GameObject:
   - component: {fileID: 1278082939}
   - component: {fileID: 1278082940}
   m_Layer: 0
-  m_Name: registro 2
+  m_Name: registro 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1278082939
 Transform:
   m_ObjectHideFlags: 0
@@ -4091,10 +4234,10 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1539632064}
-  - {fileID: 1846011709}
   - {fileID: 1843832847}
   - {fileID: 360437219}
+  - {fileID: 1539632064}
+  - {fileID: 1846011709}
   m_Father: {fileID: 1448700443}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -4221,7 +4364,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1291029454}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1448700445}
+        m_TargetAssemblyTypeName: BotonesOrdenador, Assembly-CSharp
+        m_MethodName: DesactivarNota
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1291029454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4273,12 +4428,12 @@ GameObject:
   - component: {fileID: 1326833101}
   - component: {fileID: 1326833100}
   m_Layer: 5
-  m_Name: reg 6
+  m_Name: P5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1326833099
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4342,7 +4497,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1326833101}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1448700445}
+        m_TargetAssemblyTypeName: BotonesOrdenador, Assembly-CSharp
+        m_MethodName: NotaPos
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1326833101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4416,8 +4583,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 368.74, y: 189.04}
-  m_SizeDelta: {x: 27.54, y: 23.3}
+  m_AnchoredPosition: {x: 352.2, y: 180.2}
+  m_SizeDelta: {x: 32.64, y: 27.62}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1381883211
 MonoBehaviour:
@@ -4594,7 +4761,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1408137189}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1448700445}
+        m_TargetAssemblyTypeName: BotonesOrdenador, Assembly-CSharp
+        m_MethodName: DesactivarNota
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1408137189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4828,6 +5007,19 @@ MonoBehaviour:
   inicio: {fileID: 1525359120}
   narrativa: {fileID: 1565799661}
   posesiones: {fileID: 1282869096}
+  nar:
+  - {fileID: 506461903}
+  - {fileID: 13187725}
+  - {fileID: 229803060}
+  - {fileID: 1890985687}
+  - {fileID: 1652878767}
+  pos:
+  - {fileID: 906898038}
+  - {fileID: 1278082938}
+  - {fileID: 537815664}
+  - {fileID: 1761677811}
+  - {fileID: 887211663}
+  - {fileID: 1541016914}
 --- !u!1 &1461565171
 GameObject:
   m_ObjectHideFlags: 0
@@ -4841,12 +5033,12 @@ GameObject:
   - component: {fileID: 1461565174}
   - component: {fileID: 1461565173}
   m_Layer: 5
-  m_Name: NO 4
+  m_Name: N3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1461565172
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4910,7 +5102,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1461565174}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1448700445}
+        m_TargetAssemblyTypeName: BotonesOrdenador, Assembly-CSharp
+        m_MethodName: NotaNar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1461565174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4981,6 +5185,7 @@ RectTransform:
   - {fileID: 660393659}
   - {fileID: 1989688939}
   - {fileID: 1461565172}
+  - {fileID: 1133511651}
   m_Father: {fileID: 1565799662}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -5092,8 +5297,8 @@ Transform:
   m_GameObject: {fileID: 1539632063}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.310502, y: -4.00581, z: -4226.5283}
-  m_LocalScale: {x: 39.554527, y: 37.926613, z: 46.961426}
+  m_LocalPosition: {x: 5.17, y: -3.63, z: -4226.5283}
+  m_LocalScale: {x: 37.600536, y: 36.42472, z: 46.961426}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1282869097}
@@ -5161,12 +5366,12 @@ GameObject:
   - component: {fileID: 1541016915}
   - component: {fileID: 1541016916}
   m_Layer: 0
-  m_Name: registro 6
+  m_Name: registro 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1541016915
 Transform:
   m_ObjectHideFlags: 0
@@ -5317,7 +5522,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1541149991}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1448700445}
+        m_TargetAssemblyTypeName: BotonesOrdenador, Assembly-CSharp
+        m_MethodName: DesactivarNota
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1541149991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5521,12 +5738,12 @@ GameObject:
   - component: {fileID: 1652878768}
   - component: {fileID: 1652878769}
   m_Layer: 0
-  m_Name: registro 7
+  m_Name: entrada dir5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1652878768
 Transform:
   m_ObjectHideFlags: 0
@@ -5536,13 +5753,13 @@ Transform:
   m_GameObject: {fileID: 1652878767}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3, y: -1, z: -4226.5283}
-  m_LocalScale: {x: 55.884098, y: 55.884098, z: 55.884098}
+  m_LocalPosition: {x: 2.999426, y: -0.99980867, z: -4225.7197}
+  m_LocalScale: {x: 55.873405, y: 55.873405, z: 55.873405}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 277336987}
   - {fileID: 62084997}
-  m_Father: {fileID: 360437219}
+  m_Father: {fileID: 2107104743}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1652878769
 SpriteRenderer:
@@ -5774,12 +5991,12 @@ GameObject:
   - component: {fileID: 1761677812}
   - component: {fileID: 1761677813}
   m_Layer: 0
-  m_Name: registro 4
+  m_Name: registro 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1761677812
 Transform:
   m_ObjectHideFlags: 0
@@ -5930,7 +6147,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1828285981}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1448700445}
+        m_TargetAssemblyTypeName: BotonesOrdenador, Assembly-CSharp
+        m_MethodName: DesactivarNota
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1828285981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6003,7 +6232,6 @@ RectTransform:
   - {fileID: 532420269}
   - {fileID: 748498941}
   - {fileID: 1326833099}
-  - {fileID: 1133511651}
   m_Father: {fileID: 1282869097}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -6046,8 +6274,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 367.94, y: 189.04}
-  m_SizeDelta: {x: 29.14, y: 23.3}
+  m_AnchoredPosition: {x: 353.13, y: 181.9}
+  m_SizeDelta: {x: 31.6, y: 31.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1846011710
 MonoBehaviour:
@@ -6238,7 +6466,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1890985688
 Transform:
   m_ObjectHideFlags: 0
@@ -6554,12 +6782,12 @@ GameObject:
   - component: {fileID: 1987370920}
   - component: {fileID: 1987370919}
   m_Layer: 5
-  m_Name: reg 1
+  m_Name: P0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1987370918
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6624,13 +6852,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1448700439}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1448700445}
+        m_TargetAssemblyTypeName: BotonesOrdenador, Assembly-CSharp
+        m_MethodName: NotaPos
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -6687,12 +6915,12 @@ GameObject:
   - component: {fileID: 1989688941}
   - component: {fileID: 1989688940}
   m_Layer: 5
-  m_Name: NO 3
+  m_Name: N2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1989688939
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6756,7 +6984,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1989688941}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1448700445}
+        m_TargetAssemblyTypeName: BotonesOrdenador, Assembly-CSharp
+        m_MethodName: NotaNar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1989688941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7018,7 +7258,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2107104743
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7035,6 +7275,7 @@ RectTransform:
   - {fileID: 13187726}
   - {fileID: 229803061}
   - {fileID: 1890985688}
+  - {fileID: 1652878768}
   m_Father: {fileID: 1565799662}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
