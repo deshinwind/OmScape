@@ -33,7 +33,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Taller/T4.unity
     guid: 9753e640792f56b4e98c81861e82da27
   - enabled: 1
-    path: Assets/Scenes/menuprincipal.unity
+    path: Assets/Scenes/menus/menuprincipal.unity
     guid: d9740a6eb6fb5bb4ebf11965f73ca510
   - enabled: 1
     path: "Assets/Scenes/Habitaci\xF3n/H3Objetos/Ordenador.unity"
@@ -50,6 +50,9 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/Scenes/Habitaci\xF3n/H2Objetos/Cama.unity"
     guid: 8ec8cc46d1f1f2f449deccbfedd605b2
+  - enabled: 1
+    path: Assets/Scenes/menus/controles.unity
+    guid: 787abc063dcb31c489515c224252534d
   - enabled: 1
     path: "Assets/Scenes/Habitaci\xF3n/H3Objetos/Escritorio enterio.unity"
     guid: 6944c6509c2a5be4085e12f78a70fd5b
