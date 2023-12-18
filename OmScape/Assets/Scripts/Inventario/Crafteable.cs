@@ -30,14 +30,6 @@ public class Crafteable : MonoBehaviour, IPointerClickHandler
         }
     }
 
-    private void Update()
-    {
-        if (panel != null && !crafteo.crafteoActivo)
-        {
-
-        }
-    }
-
     public void OnPointerClick(PointerEventData eventData)
     {
         if (eventData.button == PointerEventData.InputButton.Left)
@@ -79,6 +71,13 @@ public class Crafteable : MonoBehaviour, IPointerClickHandler
         if (slot.thisItemSelected && slot.isfull)
         {
             almacen.AddItemEscaner(gameObject.GetComponent<slotdeitems>().itemName, slot.itemsprite, gameObject.tag);
+            itemNameAux = gameObject.name;
+            itemspriteAux = slot.itemsprite;
+            tagAux = gameObject.tag;
+        }
+        if (almacen.enviado)
+        {
+            slot.RemoveItem();
         }
     }
 }

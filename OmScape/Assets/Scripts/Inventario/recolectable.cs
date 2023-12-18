@@ -21,4 +21,9 @@ public class recolectable : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    public void Linterna()
+    {
+        inventario.linterna = true;
+    }
 }

@@ -8,7 +8,7 @@ public class Inventario : MonoBehaviour
     public GameObject crafteoMenu;
     public bool inventarioActivo;
     public bool recolectado;
-    [SerializeField] private slotdeitems[] slotdeitems;
+    public slotdeitems[] slotdeitems;
     [SerializeField] private Crafteo crafteo;
 
     public GameObject objeto;
@@ -25,6 +25,8 @@ public class Inventario : MonoBehaviour
 
     private List<int> numeroObjeto;
     private List<int> numeroNota;
+
+    public bool linterna;
 
     private void Start()
     {

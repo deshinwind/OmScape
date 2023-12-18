@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class slotdeitems : MonoBehaviour, IPointerClickHandler
@@ -20,12 +21,18 @@ public class slotdeitems : MonoBehaviour, IPointerClickHandler
 
     private Inventario inventario;
     private Crafteo crafteo;
+    private AlmacenSensor almacen;
     public Sprite spriteAuxiliar;
 
     private void Start()
     {
         inventario = GameObject.Find("Canvas2").GetComponent<Inventario>();
         crafteo = GameObject.Find("Canvas2").GetComponent<Crafteo>();
+
+        if (SceneManager.GetActiveScene().name.Equals("panel"))
+        {
+            almacen = GameObject.Find("Canvas").GetComponent<AlmacenSensor>();
+        }
     }
     public void AddItem(string itemname, Sprite itemsprite)     //Añade un item al slot (puede ser al inventario o al crafteo)
     {
@@ -53,6 +60,10 @@ public class slotdeitems : MonoBehaviour, IPointerClickHandler
     }
     public void OnLeftClick()       //Selecciona el slot seleccionado (ya sea inventario o crafteo)
     {
+        if (almacen != null)
+        {
+            almacen.DeselectAllSlots();
+        }
         inventario.DeselectAllSlots();
         crafteo.DeselectAllSlots();
         selectedshader.SetActive(true);

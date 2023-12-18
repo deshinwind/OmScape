@@ -5,10 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class ButtonFuncionality : MonoBehaviour
 {
+    public panel panel;
     private void Start()
     {
         FindObjectOfType<Inventario>().ComprobarRepetidos();       //Llamamos a la comprobación de los objetos repetidos al cambiar de escena
         FindObjectOfType<Inventario>().ComprobarFotosRepetidas();
+        
+        panel = GameObject.Find("Canvas2").GetComponent<panel>();
+        panel.desactivada = true;
     }
     public void ButtonExit()
     {
@@ -37,7 +41,13 @@ public class ButtonFuncionality : MonoBehaviour
 
     public void ButtonT1()
     {
-        SceneManager.LoadScene("T1");
+        if (panel != null)
+        {
+            if (panel.escaneado)
+            {
+                SceneManager.LoadScene("T1");
+            }
+        }
     }
 
     public void ButtonT2()

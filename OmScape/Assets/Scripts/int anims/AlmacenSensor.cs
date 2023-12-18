@@ -8,18 +8,26 @@ public class AlmacenSensor : MonoBehaviour
 
     public slotdeitems[] slot;
     public panel panel;
+    public panel panel2;
     public Inventario inventario;
+
+    public bool enviado;
 
     private void Start()
     {
         inventario = GameObject.Find("Canvas2").GetComponent<Inventario>();
+        panel2 = GameObject.Find("Canvas2").GetComponent <panel>();
     }
 
     public void ComprobarEscaner()
     {
         if (slot[0].CompareTag(slot[1].tag) && slot[0].CompareTag(slot[2].tag) && slot[0].isfull && slot[0].CompareTag("Sensor"))
         {
-            panel.Escanear();
+            panel2.Escanear();
+            slot[0].RemoveItem();
+            slot[1].RemoveItem();
+            slot[2].RemoveItem();
+            print("HAS ABIERTO LA PUERTA DEL TALLER");
         }
         else
         {
@@ -67,14 +75,14 @@ public class AlmacenSensor : MonoBehaviour
 
     public void AddItemEscaner(string itemname, Sprite itemsprite, string valorTag)    //Añade un item al Sensor
     {
-        //crafteado = false;
+        enviado = false;
         for (int i = 0; i < tamañoMaximo; i++)
         {
             if (!slot[i].isfull)
             {
                 slot[i].AddItem(itemname, itemsprite);
                 slot[i].tag = valorTag;
-                //crafteado = true;
+                enviado = true;
                 return;
             }
             // HACER UN ELSE QUE HAGA UNA PEQUEÑA ANIMACION O ALGO QUE INDIQUE AL USUARIO QUE EL CRAFTEO ESTÁ LLENO

@@ -10,27 +10,35 @@ public class Linterna : MonoBehaviour
 {
     //public GameObject linterna;
     public bool linternaActiva;
+    public Inventario inventario;
+
+    public Sprite linternaSprite;
+
+    private void Start()
+    {
+        inventario = GameObject.Find("Canvas2").GetComponent<Inventario>();
+    }
 
     void Update()
     {
-        CambioEscena();
+        //CambioEscena();
 
-        if (linternaActiva)
+        if (inventario.linterna)
         {
-            gameObject.SetActive(true);
+            gameObject.GetComponent<SpriteRenderer>().sprite = linternaSprite;
             Vector3 posicionRaton = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
             posicionRaton.z = 0.5f;
 
             transform.position = posicionRaton;
         }
-        else
+        /*else
         {
             gameObject.SetActive(false);
-        }
+        }*/
     }
 
-    public void CambioEscena()
+    /*public void CambioEscena()
     {
         if (SceneManager.GetActiveScene().name.Equals("Ordenador"))
         {
@@ -40,5 +48,5 @@ public class Linterna : MonoBehaviour
         {
             linternaActiva = true;
         }
-    }
+    }*/
 }
