@@ -10,6 +10,18 @@ public class menuprincipal : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene("H1");
     }
+
+    public void Controles()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("controles");
+    }
+    public void Volver()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("menuprincipal");
+    }
+
     public void salir()
     {
         Application.Quit();
