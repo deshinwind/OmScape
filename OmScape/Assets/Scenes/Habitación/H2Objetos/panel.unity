@@ -159,8 +159,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -530.99994, y: 362}
-  m_SizeDelta: {x: -1574.8801, y: -931.99}
+  m_AnchoredPosition: {x: 0.0010986328, y: 0.0018310547}
+  m_SizeDelta: {x: -466.63, y: -262.48}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &11546938
 MonoBehaviour:
@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.39215687}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -395,6 +395,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemname: 
   sprite: {fileID: 0}
+  fusiblesInterfaz: {fileID: 0}
   slot: {fileID: 253023892}
   itemNameAux: 
   itemspriteAux: {fileID: 0}
@@ -5315,7 +5316,7 @@ RectTransform:
   m_GameObject: {fileID: 437593954}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.42021, y: 0.42021, z: 0.42021}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1802381859}
@@ -5325,9 +5326,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 167.43, y: -97.29999}
+  m_AnchoredPosition: {x: 11.099976, y: -9.200012}
   m_SizeDelta: {x: 293.44, y: 82.47}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 1}
 --- !u!114 &437593956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5440,7 +5441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -5460,7 +5461,7 @@ Canvas:
   m_GameObject: {fileID: 460675653}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 503212586}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -5824,15 +5825,15 @@ RectTransform:
   m_GameObject: {fileID: 865916869}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.27174, y: 0.27174, z: 0.27174}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2078307991}
   m_Father: {fileID: 11546937}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5.13, y: 43.9}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 70.9, y: -51}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &865916871
@@ -6111,6 +6112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemname: 
   sprite: {fileID: 0}
+  fusiblesInterfaz: {fileID: 0}
   slot: {fileID: 1696969271}
   itemNameAux: 
   itemspriteAux: {fileID: 0}
@@ -6266,6 +6268,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemname: 
   sprite: {fileID: 0}
+  fusiblesInterfaz: {fileID: 0}
   slot: {fileID: 1802381860}
   itemNameAux: 
   itemspriteAux: {fileID: 0}

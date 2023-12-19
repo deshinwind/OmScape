@@ -16,7 +16,7 @@ public class menupausa : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown("ESC"))
+        if(Input.GetKeyDown("p"))
         {
 
             if (ispaused)

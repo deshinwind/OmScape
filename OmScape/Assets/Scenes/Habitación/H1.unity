@@ -882,8 +882,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 167.43, y: -97.29999}
-  m_SizeDelta: {x: 293.44, y: 82.47}
+  m_AnchoredPosition: {x: 165.99, y: -98.5}
+  m_SizeDelta: {x: 79.89, y: 82.47}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &407594328
 MonoBehaviour:
@@ -1858,6 +1858,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemname: 
   sprite: {fileID: 0}
+  fusiblesInterfaz: {fileID: 0}
   slot: {fileID: 524957077}
   itemNameAux: 
   itemspriteAux: {fileID: 0}
@@ -2410,6 +2411,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemname: 
   sprite: {fileID: 0}
+  fusiblesInterfaz: {fileID: 0}
   slot: {fileID: 944584980}
   itemNameAux: 
   itemspriteAux: {fileID: 0}
@@ -3091,6 +3093,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemname: 
   sprite: {fileID: 0}
+  fusiblesInterfaz: {fileID: 0}
   slot: {fileID: 1069929618}
   itemNameAux: 
   itemspriteAux: {fileID: 0}
@@ -3774,6 +3777,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemname: 
   sprite: {fileID: 0}
+  fusiblesInterfaz: {fileID: 0}
   slot: {fileID: 1234626344}
   itemNameAux: 
   itemspriteAux: {fileID: 0}
@@ -3949,6 +3953,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemname: 
   sprite: {fileID: 0}
+  fusiblesInterfaz: {fileID: 0}
   slot: {fileID: 1289580220}
   itemNameAux: 
   itemspriteAux: {fileID: 0}
@@ -4741,6 +4746,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemname: 
   sprite: {fileID: 0}
+  fusiblesInterfaz: {fileID: 0}
   slot: {fileID: 1530673112}
   itemNameAux: 
   itemspriteAux: {fileID: 0}
@@ -5813,6 +5819,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemname: 
   sprite: {fileID: 0}
+  fusiblesInterfaz: {fileID: 0}
   slot: {fileID: 1994751282}
   itemNameAux: 
   itemspriteAux: {fileID: 0}
