@@ -8,12 +8,14 @@ public class panel : MonoBehaviour
     [SerializeField] private ParticleSystem particulas;
     public bool escaneado = false;
     public Crafteo crafteo;
+    private Animator escaneop;
 
     public bool desactivada = true;
 
     private void Start()
     {
         crafteo = GameObject.Find("Canvas2").GetComponent<Crafteo>();
+        escaneop = gameObject.AddComponent<Animator>();
     }
 
     private void Update()
@@ -38,7 +40,9 @@ public class panel : MonoBehaviour
 
     public void fallaste()
     {
+        
         particulas.Play();
+
     }
 
     public void Escanear()
