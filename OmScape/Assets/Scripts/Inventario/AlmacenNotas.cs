@@ -23,7 +23,8 @@ public class AlmacenNotas : MonoBehaviour
     public readonly int tamañoPosesion = 6;
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && mostrandoNota)
+
+        if (Input.GetMouseButtonDown(1) && mostrandoNota) 
         {
 
             if (!nota.name.Equals("NotaFalsa"))
