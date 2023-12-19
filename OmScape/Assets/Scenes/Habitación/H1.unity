@@ -1737,6 +1737,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   candadosprite: {fileID: -1346655961, guid: b58d8c4c38db9af42b57781980b65043, type: 3}
   activos: {fileID: 0}
+  inventario: {fileID: 0}
 --- !u!61 &578445402
 BoxCollider2D:
   m_ObjectHideFlags: 0
