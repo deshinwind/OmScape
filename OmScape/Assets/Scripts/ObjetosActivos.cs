@@ -14,8 +14,11 @@ public class ObjetosActivos : MonoBehaviour
 
     public GameObject bufandaO;
     public GameObject cajonO;
+    public GameObject boton;
 
     public Sprite cajonSprit;
+
+    public Inventario inventario;
 
     private void Update()
     {
@@ -28,12 +31,15 @@ public class ObjetosActivos : MonoBehaviour
             cajonO = GameObject.Find("doble");
         }
 
-        if (bufandaO != null)
+        /*if (SceneManager.GetActiveScene().name.Equals("H1") && boton == null)
         {
-            if (bufanda)
-            {
-                Invoke("OrdenBufanda", 0.5f);
-            }
+            boton = GameObject.Find("BotonFusibles");
+            boton.SetActive(false);
+        }*/
+
+        if (candado && cajaDeFusibles && bufanda)
+        {
+            boton.SetActive(true);
         }
 
         if (cajonO != null)
@@ -76,8 +82,17 @@ public class ObjetosActivos : MonoBehaviour
         fusibles = true;
     }
 
-    public void OrdenBufanda()
+    public void FuncionControlFusibles()
     {
-        bufandaO.GetComponent<SpriteRenderer>().sortingOrder = 1;
+        for (int i = 0; i < inventario.slotdeitems.Length; i++)
+        {
+            print(inventario.slotdeitems[i].itemName);
+            if (inventario.slotdeitems[i].itemName.Equals("Fusible Azul"))
+            {
+                print("final");
+                fusibles = true;
+                break;
+            }
+        }
     }
 }

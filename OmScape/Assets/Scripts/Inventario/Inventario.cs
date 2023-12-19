@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Inventario : MonoBehaviour
 {
@@ -83,6 +84,10 @@ public class Inventario : MonoBehaviour
     {
         numeroNota = new List<int>();
         nota = GameObject.Find("Notas");
+        if (SceneManager.GetActiveScene().name.Equals("Baul") || SceneManager.GetActiveScene().name.Equals("cajon"))
+        {
+            nota.SetActive(false);
+        }
 
         for (int i = 0; i < nota.transform.childCount; i++)
         {
@@ -142,6 +147,11 @@ public class Inventario : MonoBehaviour
     {
         numeroObjeto = new List<int>();
         objeto = GameObject.Find("Objetos");
+        if (SceneManager.GetActiveScene().name.Equals("Baul") || SceneManager.GetActiveScene().name.Equals("cajon"))
+        {
+            objeto.SetActive(false);
+        }
+
 
         for (int i = 0; i < objeto.transform.childCount; i++)
         {

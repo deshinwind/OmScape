@@ -92,7 +92,6 @@ public class Crafteo : MonoBehaviour
         {
             if (slotdeitems[0].CompareTag("foto"))
             {
-                print("E UNA FOTO MARAVIOSA");
                 GameObject basura = Instantiate(prefabFoto);
                 inventario.AddObjetoCrafteado(basura.name, tagFoto);
                 Destroy(basura);
