@@ -5510,6 +5510,7 @@ MonoBehaviour:
   particulas: {fileID: 428072763}
   escaneado: 0
   crafteo: {fileID: 0}
+  escaneop: {fileID: 580489589}
   desactivada: 1
 --- !u!114 &460675659
 MonoBehaviour:

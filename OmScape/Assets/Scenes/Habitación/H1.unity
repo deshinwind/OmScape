@@ -673,7 +673,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 227.43896, y: -151.00159}
+  m_AnchoredPosition: {x: 227.43896, y: -151.0016}
   m_SizeDelta: {x: -454.88, y: -301.99}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &321611005
@@ -882,7 +882,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 165.99, y: -98.5}
+  m_AnchoredPosition: {x: 165.98999, y: -98.5}
   m_SizeDelta: {x: 79.89, y: 82.47}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &407594328
@@ -3395,6 +3395,7 @@ MonoBehaviour:
   particulas: {fileID: 0}
   escaneado: 0
   crafteo: {fileID: 0}
+  escaneop: {fileID: 0}
   desactivada: 1
 --- !u!114 &1101667697
 MonoBehaviour:

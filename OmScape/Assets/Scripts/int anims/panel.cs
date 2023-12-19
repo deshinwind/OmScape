@@ -8,14 +8,14 @@ public class panel : MonoBehaviour
     [SerializeField] private ParticleSystem particulas;
     public bool escaneado = false;
     public Crafteo crafteo;
-    private Animator escaneop;
+    public Animator escaneop;
 
     public bool desactivada = true;
 
     private void Start()
     {
         crafteo = GameObject.Find("Canvas2").GetComponent<Crafteo>();
-        escaneop = gameObject.AddComponent<Animator>();
+        //escaneop = gameObject.AddComponent<Animator>();
     }
 
     private void Update()
@@ -33,11 +33,23 @@ public class panel : MonoBehaviour
             
         }
     }
+    public void neutro()
+    {
+        escaneop.SetBool("no", false);
+
+    }
 
     public void fallaste()
     {
-        
+        escaneop.SetBool("no", true);
         particulas.Play();
+        Invoke("neutro", 0.5f);
+
+    }
+
+    public void acertaste()
+    {
+        escaneop.SetBool("si", true);
 
     }
 

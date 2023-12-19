@@ -16,13 +16,14 @@ public class AlmacenSensor : MonoBehaviour
     private void Start()
     {
         inventario = GameObject.Find("Canvas2").GetComponent<Inventario>();
-        panel2 = GameObject.Find("Canvas2").GetComponent <panel>();
+        panel2 = GameObject.Find("Canvas2").GetComponent<panel>();
     }
 
     public void ComprobarEscaner()
     {
         if (slot[0].CompareTag(slot[1].tag) && slot[0].CompareTag(slot[2].tag) && slot[0].isfull && slot[0].CompareTag("Sensor"))
         {
+            panel.acertaste();
             panel2.Escanear();
             slot[0].RemoveItem();
             slot[1].RemoveItem();
