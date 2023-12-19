@@ -10,6 +10,7 @@ public class ObjetosActivos : MonoBehaviour
     public bool cajon;
     public bool baul;
     public bool candado;
+    public bool fusibles;
 
     public GameObject bufandaO;
     public GameObject cajonO;
@@ -68,6 +69,11 @@ public class ObjetosActivos : MonoBehaviour
     public void Candado()
     {
         candado = true;
+    }
+
+    public void Fusibles()
+    {
+        fusibles = true;
     }
 
     public void OrdenBufanda()

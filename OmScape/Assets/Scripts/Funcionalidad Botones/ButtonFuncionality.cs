@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class ButtonFuncionality : MonoBehaviour
 {
     public panel panel;
+    public ObjetosActivos activos;
     private void Start()
     {
         if (!gameObject.name.Equals("doble") || !gameObject.name.Equals("baul") || !gameObject.name.Equals("pc 1"))
@@ -13,6 +14,7 @@ public class ButtonFuncionality : MonoBehaviour
             FindObjectOfType<Inventario>().ComprobarRepetidos();       //Llamamos a la comprobación de los objetos repetidos al cambiar de escena
             FindObjectOfType<Inventario>().ComprobarFotosRepetidas();
         }
+        activos = GameObject.Find("Canvas2").GetComponent<ObjetosActivos>();
         panel = GameObject.Find("Canvas2").GetComponent<panel>();
         panel.desactivada = true;
     }
@@ -44,7 +46,13 @@ public class ButtonFuncionality : MonoBehaviour
 
     public void ButtonExit()
     {
-        SceneManager.LoadScene("Exit");
+        if (activos  != null)
+        {
+            if (activos.fusibles)
+            {
+                SceneManager.LoadScene("Exit");
+            }
+        }
     }
     public void mesapc()
     {

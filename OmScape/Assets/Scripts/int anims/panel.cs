@@ -22,15 +22,11 @@ public class panel : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name.Equals("H2")/* && escaneado && desactivada*/)
         {
-            print(SceneManager.GetActiveScene().name.Equals("H2"));
             if (escaneado)
             {
-                print(escaneado);
                 if (desactivada)
                 {
-                    print(desactivada);
                     GameObject.Find("puerta").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("sprites/interfaz/vacio");
-                    print("HOLA");
                     desactivada = false;
                 }
             }

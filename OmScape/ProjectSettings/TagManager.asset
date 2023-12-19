@@ -14,6 +14,8 @@ TagManager:
   - Sensor
   - GanzuaCompleta
   - Barrena
+  - FusibleMalo
+  - FusibleBueno
   layers:
   - Default
   - TransparentFX

@@ -1676,6 +1676,7 @@ MonoBehaviour:
   - {fileID: 449114016}
   - {fileID: 897604813}
   posicionBotones: []
+  objetosActivos: {fileID: 0}
   objetos: []
   notas: []
 --- !u!1 &1249118836

@@ -68,10 +68,8 @@ public class Puntero : MonoBehaviour
                 }
                 else
                 {
-                    print(objeto.name);
                     objeto.GetComponent<recolectable>().EnviarAInventario();
                 }
-                Debug.Log("Target Position: " + hit.collider.gameObject.transform.position);
             }
         }
     }
