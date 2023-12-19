@@ -18,9 +18,6 @@ public class panel : MonoBehaviour
 
     private void Update()
     {
-        
-        
-        
         if (SceneManager.GetActiveScene().name.Equals("H2")/* && escaneado && desactivada*/)
         {
             print(SceneManager.GetActiveScene().name.Equals("H2"));

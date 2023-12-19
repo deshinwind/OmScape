@@ -8,12 +8,33 @@ public class ButtonFuncionality : MonoBehaviour
     public panel panel;
     private void Start()
     {
-        FindObjectOfType<Inventario>().ComprobarRepetidos();       //Llamamos a la comprobación de los objetos repetidos al cambiar de escena
-        FindObjectOfType<Inventario>().ComprobarFotosRepetidas();
-        
+        if (!gameObject.name.Equals("doble") || !gameObject.name.Equals("baul"))
+        {
+            FindObjectOfType<Inventario>().ComprobarRepetidos();       //Llamamos a la comprobación de los objetos repetidos al cambiar de escena
+            FindObjectOfType<Inventario>().ComprobarFotosRepetidas();
+        }
         panel = GameObject.Find("Canvas2").GetComponent<panel>();
         panel.desactivada = true;
     }
+
+    void Update()
+    {
+        if (SceneManager.GetActiveScene().name.Equals("cajon"))
+        {
+            if (Input.GetMouseButtonDown(1))
+            {
+                SceneManager.LoadScene("T3");
+            }
+        }
+        if (SceneManager.GetActiveScene().name.Equals("Baul"))
+        {
+            if (Input.GetMouseButtonDown(1))
+            {
+                SceneManager.LoadScene("H2");
+            }
+        }
+    }
+
     public void ButtonExit()
     {
         SceneManager.LoadScene("Exit");

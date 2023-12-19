@@ -20,6 +20,7 @@ public class CameraZoomController : MonoBehaviour
     private int n = 0;
     private int numeroBotones;
 
+    public ObjetosActivos objetosActivos;
     public GameObject[] objetos;
     public GameObject[] notas;
 
@@ -50,6 +51,13 @@ public class CameraZoomController : MonoBehaviour
             notas = new GameObject[2];
             notas[0] = GameObject.Find("P3");
             notas[1] = GameObject.Find("N2");
+        }
+        else if (SceneManager.GetActiveScene().name.Equals("H1"))
+        {
+            objetosActivos = GameObject.Find("Canvas2").GetComponent<ObjetosActivos>();
+            objetos = new GameObject[2];
+            objetos[0] = GameObject.Find("bufanda");
+            objetos[1] = GameObject.Find("caja de fusibles");
         }
 
     }
@@ -103,6 +111,20 @@ public class CameraZoomController : MonoBehaviour
                 if (objetos[0].activeSelf) { objetos[0].GetComponent<BoxCollider2D>().enabled = false; }
                 if (notas[0].activeSelf) { notas[0].GetComponent<BoxCollider2D>().enabled = false; }
                 if (notas[1].activeSelf) { notas[1].GetComponent<BoxCollider2D>().enabled = false; }
+            }
+        }
+        else if (SceneManager.GetActiveScene().name.Equals("H1"))
+        {
+            if (zoomCheck[1])
+            {
+                //if(objetosActivos.bufanda){ objetos[0].GetComponent<SpriteRenderer>().sortingOrder = 1; }
+                if (!objetosActivos.bufanda) { if (objetos[0].activeSelf) { objetos[0].GetComponent<BoxCollider2D>().enabled = true; } }
+                if (!objetosActivos.cajaDeFusibles) { if (objetos[1].activeSelf) { objetos[1].GetComponent<BoxCollider2D>().enabled = true; } }
+            }
+            else
+            {
+                if (!objetosActivos.bufanda) { if (objetos[0].activeSelf) { objetos[0].GetComponent<BoxCollider2D>().enabled = false; } }
+                if (!objetosActivos.cajaDeFusibles) { if (objetos[1].activeSelf) { objetos[1].GetComponent<BoxCollider2D>().enabled = false; } }
             }
         }
     }

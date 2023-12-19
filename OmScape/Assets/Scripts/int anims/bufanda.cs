@@ -9,28 +9,30 @@ public class bufanda : MonoBehaviour
 {
     public Sprite bufandasprite;
     private Animator animator;
+    public ObjetosActivos activos;
 
- 
     public void Awake()
     {
         animator = GetComponent<Animator>();
     }
 
-    void Update()
+    void Start()
     {
-        if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
-        {
-            animator.SetTrigger("estapulsadabufanda");
-            Destroy(GetComponent<BoxCollider2D>());
-            Invoke("Prueba", 0.15f);
-
-        }
+        activos = GameObject.Find("Canvas2").GetComponent<ObjetosActivos>();
     }
-    void Prueba()
+
+    public void Abrir()
+    {
+        animator.SetTrigger("estapulsadabufanda");
+        gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        activos.Bufanda();
+        //Destroy(GetComponent<BoxCollider2D>());
+        Invoke("Animacion", 0.15f);
+    }
+
+    void Animacion()
     {
         animator.SetTrigger("estapulsadabufanda");
         GameObject.Find("bufanda").GetComponent<SpriteRenderer>().sprite = bufandasprite;
-
     }
-
 }

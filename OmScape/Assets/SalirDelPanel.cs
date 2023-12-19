@@ -7,7 +7,7 @@ public class SalirDelPanel : MonoBehaviour
 {
     void Update()
     {
-        if (Input.GetButtonDown("Cancel"))
+        if (Input.GetMouseButtonDown(1))
         {
             SceneManager.LoadScene("H2");
         }

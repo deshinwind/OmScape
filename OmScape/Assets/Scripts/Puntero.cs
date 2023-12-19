@@ -46,6 +46,26 @@ public class Puntero : MonoBehaviour
                 {
                     objeto.GetComponent<doblefondo>().Abrir();
                 }
+                else if (objeto.name.Equals("Sensor"))
+                {
+                    GameObject.Find("Canvas").GetComponent<ButtonFuncionality>().ButtonSensor();
+                }
+                else if (objeto.name.Equals("bufanda"))
+                {
+                    objeto.GetComponent<bufanda>().Abrir();
+                }
+                else if (objeto.name.Equals("caja de fusibles"))
+                {
+                    objeto.GetComponent<cajadefusibles>().Abrir();
+                }
+                else if (objeto.name.Equals("baul"))
+                {
+                    objeto.GetComponent<Baul>().Abrir();
+                }
+                else if (objeto.name.Equals("candado"))
+                {
+                    objeto.GetComponent<candado>().Abrir();
+                }
                 else
                 {
                     print(objeto.name);

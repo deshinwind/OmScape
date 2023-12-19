@@ -14,6 +14,8 @@ public class doblefondo : MonoBehaviour
     public GameObject notas;
     public Inventario inventario;
 
+    public ObjetosActivos activos;
+
     public void Awake()
     {
         animator = GetComponent<Animator>();
@@ -21,6 +23,7 @@ public class doblefondo : MonoBehaviour
 
     private void Start()
     {
+        activos = GameObject.Find("Canvas2").GetComponent<ObjetosActivos>();
         inventario = GameObject.Find("Canvas2").GetComponent<Inventario>();
         if (inventario.dobleFondo)
         {
@@ -57,7 +60,7 @@ public class doblefondo : MonoBehaviour
     {
         objetos.SetActive(true);
         notas.SetActive(true);
-        inventario.dobleFondo = true;
+        activos.cajon = true;
     }
 
 }
