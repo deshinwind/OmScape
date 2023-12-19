@@ -7,6 +7,8 @@ public class menupausa : MonoBehaviour
 {
     public GameObject menudepausa;
     public bool ispaused;
+
+
     void Start()
     {
         menudepausa.SetActive(false);
@@ -14,8 +16,9 @@ public class menupausa : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if(Input.GetKeyDown("ESC"))
         {
+
             if (ispaused)
             {
                 Resumegame();
@@ -38,7 +41,7 @@ public class menupausa : MonoBehaviour
     public void Resumegame()
     {
         menudepausa.SetActive(false);
-        Time.timeScale = 0f;
+        Time.timeScale = 1f;
         ispaused = false;
     }
 

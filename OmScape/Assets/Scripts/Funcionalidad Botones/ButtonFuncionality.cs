@@ -18,7 +18,10 @@ public class ButtonFuncionality : MonoBehaviour
     {
         SceneManager.LoadScene("Exit");
     }
-
+    public void mesapc()
+    {
+        SceneManager.LoadScene("mesaPC");
+    }
     public void ButtonH1()
     {
         SceneManager.LoadScene("H1");

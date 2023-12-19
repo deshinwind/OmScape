@@ -54,6 +54,9 @@ EditorBuildSettings:
     path: "Assets/Scenes/Habitaci\xF3n/H3Objetos/Escritorio arriba.unity"
     guid: 966dbca70ad7aac4aaa5ad46a6b2df87
   - enabled: 1
+    path: "Assets/Scenes/Habitaci\xF3n/H3Objetos/mesaPC.unity"
+    guid: 87f09549a15ca5b4c9a0422f856d1bdd
+  - enabled: 1
     path: "Assets/Scenes/Habitaci\xF3n/H2Objetos/panel.unity"
     guid: 31df52771bbad9d4982041fc1f84f7be
   - enabled: 1
