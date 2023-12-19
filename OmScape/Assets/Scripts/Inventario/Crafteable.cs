@@ -10,7 +10,8 @@ public class Crafteable : MonoBehaviour, IPointerClickHandler
     private Crafteo crafteo;
     private panel panel;
     private AlmacenSensor almacen;
-    public AlmacenFusibles alamcenFusibles;
+    private AlmacenFusibles alamcenFusibles;
+    public GameObject fusiblesInterfaz;
 
     public slotdeitems slot;
 
@@ -21,20 +22,22 @@ public class Crafteable : MonoBehaviour, IPointerClickHandler
     void Start()
     {
         crafteo = GameObject.Find("Canvas2").GetComponent<Crafteo>();
-    }
-    void Update()
-    {
-        if (SceneManager.GetActiveScene().name.Equals("panel") && panel == null && almacen == null)
+
+        if (SceneManager.GetActiveScene().name.Equals("panel"))
         {
             almacen = GameObject.Find("Canvas").GetComponent<AlmacenSensor>();
             panel = GameObject.Find("Canvas").GetComponent<panel>();
         }
-
+    }
+    void Update()
+    {
         if (alamcenFusibles == null)
         {
             if (SceneManager.GetActiveScene().name.Equals("H1"))
             {
                 alamcenFusibles = GameObject.Find("Canvas").GetComponent<AlmacenFusibles>();
+                fusiblesInterfaz = GameObject.Find("CrafreoMenu");
+                fusiblesInterfaz.SetActive(false);
             }
         }
     }
@@ -48,6 +51,13 @@ public class Crafteable : MonoBehaviour, IPointerClickHandler
                 if (SceneManager.GetActiveScene().name.Equals("panel"))
                 {
                     EnviarAEscaner();
+                }
+            }
+            else if (!crafteo.crafteoActivo)
+            {
+                if (SceneManager.GetActiveScene().name.Equals("H1") && fusiblesInterfaz.activeSelf)
+                {
+                    EnviarAFusible();
                 }
             }
             else
@@ -71,6 +81,10 @@ public class Crafteable : MonoBehaviour, IPointerClickHandler
                     slot.RemoveItem();
                 }
             }
+            else
+            {
+                print("la mamaste");
+            }
         }
     }
 
@@ -79,6 +93,21 @@ public class Crafteable : MonoBehaviour, IPointerClickHandler
         if (slot.thisItemSelected && slot.isfull)
         {
             almacen.AddItemEscaner(gameObject.GetComponent<slotdeitems>().itemName, slot.itemsprite, gameObject.tag);
+            itemNameAux = gameObject.name;
+            itemspriteAux = slot.itemsprite;
+            tagAux = gameObject.tag;
+        }
+        if (almacen.enviado)
+        {
+            slot.RemoveItem();
+        }
+    }
+
+    public void EnviarAFusible()
+    {
+        if (slot.thisItemSelected && slot.isfull)
+        {
+            alamcenFusibles.AddItemFusibles(gameObject.GetComponent<slotdeitems>().itemName, slot.itemsprite, gameObject.tag);
             itemNameAux = gameObject.name;
             itemspriteAux = slot.itemsprite;
             tagAux = gameObject.tag;

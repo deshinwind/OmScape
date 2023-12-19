@@ -23,7 +23,6 @@ public class CameraZoomController : MonoBehaviour
     public ObjetosActivos objetosActivos;
     public GameObject[] objetos;
     public GameObject[] notas;
-    public GameObject botonFinal;
 
     void Start()
     {
@@ -65,15 +64,6 @@ public class CameraZoomController : MonoBehaviour
 
     private void Update()
     {
-        if (SceneManager.GetActiveScene().name.Equals("H1"))
-        {
-            if (objetosActivos.bufanda && objetosActivos.cajaDeFusibles && objetosActivos.candado)
-            {
-                print("activa boton");
-                ActivarBotonFinal();
-            }
-        }
-
         if (SceneManager.GetActiveScene().name.Equals("H2"))
         {
             if (zoomCheck[4])
@@ -88,14 +78,10 @@ public class CameraZoomController : MonoBehaviour
             }
             else
             {
-                if (objetos[0] != null)
-                    if (objetos[0].activeSelf) { objetos[0].GetComponent<BoxCollider2D>().enabled = false; }
-                if (objetos[1] != null)
-                    if (objetos[1].activeSelf) { objetos[1].GetComponent<BoxCollider2D>().enabled = false; }
-                if (objetos[2] != null)
-                    if (objetos[2].activeSelf) { objetos[2].GetComponent<BoxCollider2D>().enabled = false; }
-                if (notas[0] != null)
-                    if (notas[0].activeSelf) { notas[0].GetComponent<BoxCollider2D>().enabled = false; }
+                if (objetos[0].activeSelf) { objetos[0].GetComponent<BoxCollider2D>().enabled = false; }
+                if (objetos[1].activeSelf) { objetos[1].GetComponent<BoxCollider2D>().enabled = false; }
+                if (objetos[2].activeSelf) { objetos[2].GetComponent<BoxCollider2D>().enabled = false; }
+                if (notas[0].activeSelf) { notas[0].GetComponent<BoxCollider2D>().enabled = false; }
             }
         }
         else if (SceneManager.GetActiveScene().name.Equals("H3"))
@@ -106,11 +92,7 @@ public class CameraZoomController : MonoBehaviour
             }
             else
             {
-                if (objetos[0] != null)
-                {
-                    if (objetos[0].activeSelf) { objetos[0].GetComponent<BoxCollider2D>().enabled = false; }
-                }
-                
+                if (objetos[0].activeSelf) { objetos[0].GetComponent<BoxCollider2D>().enabled = false; }
             }
         }
         else if (SceneManager.GetActiveScene().name.Equals("H4"))
@@ -126,12 +108,9 @@ public class CameraZoomController : MonoBehaviour
             }
             else
             {
-                if (objetos[0] != null)
-                    if (objetos[0].activeSelf) { objetos[0].GetComponent<BoxCollider2D>().enabled = false; }
-                if (notas[0] != null)
-                    if (notas[0].activeSelf) { notas[0].GetComponent<BoxCollider2D>().enabled = false; }
-                if (notas[1] != null)
-                    if (notas[1].activeSelf) { notas[1].GetComponent<BoxCollider2D>().enabled = false; }
+                if (objetos[0].activeSelf) { objetos[0].GetComponent<BoxCollider2D>().enabled = false; }
+                if (notas[0].activeSelf) { notas[0].GetComponent<BoxCollider2D>().enabled = false; }
+                if (notas[1].activeSelf) { notas[1].GetComponent<BoxCollider2D>().enabled = false; }
             }
         }
         else if (SceneManager.GetActiveScene().name.Equals("H1"))
@@ -186,11 +165,6 @@ public class CameraZoomController : MonoBehaviour
             cam.transform.position = Vector2.Lerp(cam.transform.position, posicionBotones[n-1], speed);
         }
     }
-
-    public void ActivarBotonFinal()
-    {
-        botonFinal.SetActive(true);
-    } 
 
     public void ActivarBotones()
     {

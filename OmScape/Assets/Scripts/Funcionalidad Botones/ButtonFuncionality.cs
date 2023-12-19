@@ -9,7 +9,7 @@ public class ButtonFuncionality : MonoBehaviour
     public ObjetosActivos activos;
     private void Start()
     {
-        if (gameObject.name.Equals("Canvas"))
+        if (!gameObject.name.Equals("doble") || !gameObject.name.Equals("baul") || !gameObject.name.Equals("pc 1"))
         {
             FindObjectOfType<Inventario>().ComprobarRepetidos();       //Llamamos a la comprobación de los objetos repetidos al cambiar de escena
             FindObjectOfType<Inventario>().ComprobarFotosRepetidas();
