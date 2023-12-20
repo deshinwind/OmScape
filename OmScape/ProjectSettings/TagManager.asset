@@ -16,6 +16,7 @@ TagManager:
   - Barrena
   - FusibleMalo
   - FusibleBueno
+  - NoCraft
   layers:
   - Default
   - TransparentFX

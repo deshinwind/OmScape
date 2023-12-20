@@ -19,6 +19,9 @@ public class bufanda : MonoBehaviour
     void Start()
     {
         activos = GameObject.Find("Canvas2").GetComponent<ObjetosActivos>();
+        activos.bufanda = false;
+        activos.candado = false;
+        activos.cajaDeFusibles = false;
     }
 
     public void Abrir()

@@ -11,8 +11,10 @@ public class Linterna : MonoBehaviour
     //public GameObject linterna;
     public bool linternaActiva;
     public Inventario inventario;
+    public ObjetosActivos objetosActivos;
 
     public Sprite linternaSprite;
+    public Sprite luzEncendida;
     public Sprite linternaApagada;
 
     private void Start()
@@ -26,7 +28,7 @@ public class Linterna : MonoBehaviour
         {
             LinternaDesactivada();
         }
-        else
+        if (!objetosActivos.fusibles && !SceneManager.GetActiveScene().name.Equals("Ordenador"))
         {
             LinternaActivada();
         }
@@ -44,18 +46,19 @@ public class Linterna : MonoBehaviour
 
             transform.position = posicionRaton;
         }
+        else
+        {
+            gameObject.GetComponent<SpriteRenderer>().sprite = linternaApagada;
+        }
     }
 
     public void LinternaDesactivada()
     {
-        if (inventario.linterna)
-        {
-            gameObject.GetComponent<SpriteRenderer>().sprite = linternaApagada;
-            Vector3 posicionRaton = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        gameObject.GetComponent<SpriteRenderer>().sprite = luzEncendida;
+        Vector3 posicionRaton = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-            posicionRaton.z = 0.5f;
+        posicionRaton.z = 0.5f;
 
-            transform.position = posicionRaton;
-        }
+        transform.position = posicionRaton;
     }
 }

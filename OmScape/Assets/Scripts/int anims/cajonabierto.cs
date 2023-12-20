@@ -18,7 +18,7 @@ public class cajonabierto : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
+        if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject() && Time.timeScale == 1)
         {
             animator.SetTrigger("cajontrigger");
             Destroy(GetComponent<BoxCollider2D>());

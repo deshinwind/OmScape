@@ -8,7 +8,7 @@ public class Puntero : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && Time.timeScale == 1)
         {
             Raycasteo();
         }
@@ -26,7 +26,12 @@ public class Puntero : MonoBehaviour
             {
                 objeto = GameObject.Find(hit.transform.name);
 
-                if (objeto.name.Equals("NotaFalsa"))
+                if (objeto.name.Equals("Bloqueo"))
+                {
+                    print("juego pausado por puntero");
+                    Time.timeScale = 0;
+                }
+                else if (objeto.name.Equals("NotaFalsa"))
                 {
                     objeto.GetComponent<Notas>().MostrarNotaFalsa();
                 }

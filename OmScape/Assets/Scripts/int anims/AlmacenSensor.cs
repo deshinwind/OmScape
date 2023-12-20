@@ -16,7 +16,7 @@ public class AlmacenSensor : MonoBehaviour
     private void Start()
     {
         inventario = GameObject.Find("Canvas2").GetComponent<Inventario>();
-        panel2 = GameObject.Find("Canvas2").GetComponent<panel>();
+        panel2 = GameObject.Find("Canvas2").GetComponent <panel>();
     }
 
     public void ComprobarEscaner()
@@ -28,14 +28,16 @@ public class AlmacenSensor : MonoBehaviour
             slot[0].RemoveItem();
             slot[1].RemoveItem();
             slot[2].RemoveItem();
-            print("HAS ABIERTO LA PUERTA DEL TALLER");
+
+            inventario.comicUsado = true;
+            inventario.cocheUsado = true;
         }
         else
         {
             panel.fallaste();
             if (slot[0].isfull)
             {
-                if (slot[0].CompareTag("Untagged"))
+                if (slot[0].CompareTag("Untagged") || slot[0].CompareTag("NoCraft"))
                 {
                     slot[0].RemoveItem();
                 }
@@ -48,7 +50,7 @@ public class AlmacenSensor : MonoBehaviour
 
             if (slot[1].isfull)
             {
-                if (slot[1].CompareTag("Untagged"))
+                if (slot[1].CompareTag("Untagged") || slot[1].CompareTag("NoCraft"))
                 {
                     slot[1].RemoveItem();
                 }
@@ -61,7 +63,7 @@ public class AlmacenSensor : MonoBehaviour
 
             if (slot[2].isfull)
             {
-                if (slot[2].CompareTag("Untagged"))
+                if (slot[2].CompareTag("Untagged") || slot[2].CompareTag("NoCraft"))
                 {
                     slot[2].RemoveItem();
                 }

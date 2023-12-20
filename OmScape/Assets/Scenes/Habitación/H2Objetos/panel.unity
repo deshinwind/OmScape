@@ -395,7 +395,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemname: 
   sprite: {fileID: 0}
-  fusiblesInterfaz: {fileID: 0}
+  alamcenFusibles: {fileID: 0}
   slot: {fileID: 253023892}
   itemNameAux: 
   itemspriteAux: {fileID: 0}
@@ -6113,7 +6113,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemname: 
   sprite: {fileID: 0}
-  fusiblesInterfaz: {fileID: 0}
+  alamcenFusibles: {fileID: 0}
   slot: {fileID: 1696969271}
   itemNameAux: 
   itemspriteAux: {fileID: 0}
@@ -6269,7 +6269,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemname: 
   sprite: {fileID: 0}
-  fusiblesInterfaz: {fileID: 0}
+  alamcenFusibles: {fileID: 0}
   slot: {fileID: 1802381860}
   itemNameAux: 
   itemspriteAux: {fileID: 0}

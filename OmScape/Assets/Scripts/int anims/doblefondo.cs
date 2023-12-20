@@ -34,20 +34,42 @@ public class doblefondo : MonoBehaviour
 
     public void Abrir()
     {
-        for (int i = 0; i < inventario.tamañoMaximo; i++)
+        //print(activos.cajon);
+        /*if (activos.cajon)
         {
-            if (inventario.slotdeitems[i].thisItemSelected)
+            animator.SetTrigger("doblefondotrigger");
+            Invoke("AnimacionCajon", 0.15f);
+            Invoke("ActivarObjetos", 1f);
+        }
+        else
+        {*/
+        if (inventario.cajonAbierto)
+        {
+            animator.SetTrigger("doblefondotrigger");
+            Destroy(GetComponent<BoxCollider2D>());
+            Invoke("AnimacionCajon", 0.15f);
+            Invoke("ActivarObjetos", 1f);
+        }
+        else
+        {
+            for (int i = 0; i < inventario.tamañoMaximo; i++)
             {
-                if (inventario.slotdeitems[i].CompareTag("Barrena"))
+                if (inventario.slotdeitems[i].thisItemSelected)
                 {
-                    animator.SetTrigger("doblefondotrigger");
-                    Destroy(GetComponent<BoxCollider2D>());
-                    Invoke("AnimacionCajon", 0.15f);
-                    inventario.slotdeitems[i].RemoveItem();
-                    Invoke("ActivarObjetos", 1f);
+                    if (inventario.slotdeitems[i].CompareTag("Barrena"))
+                    {
+                        animator.SetTrigger("doblefondotrigger");
+                        Destroy(GetComponent<BoxCollider2D>());
+                        Invoke("AnimacionCajon", 0.15f);
+                        inventario.slotdeitems[i].RemoveItem();
+                        Invoke("ActivarObjetos", 1f);
+                        inventario.cajonAbierto = true;
+                    }
                 }
             }
         }
+            
+            
     }
 
     void AnimacionCajon()

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Inventario : MonoBehaviour
 {
@@ -28,6 +29,19 @@ public class Inventario : MonoBehaviour
 
     public bool linterna;
     public bool dobleFondo;
+
+    public bool cajonAbierto;
+
+    public bool comicUsado = false;
+    public bool cocheUsado = false;
+
+    public bool fusibleAzul = false;
+    public bool fusibleVerde = false;
+    public bool fusibleRojo = false;
+    public bool fusibleBlanco = false;
+    public bool fusibleNegro = false;
+    public bool fusibleAmarillo = false;
+    public bool barrena = false;
 
     private void Start()
     {
@@ -136,6 +150,11 @@ public class Inventario : MonoBehaviour
         {
             nota.transform.GetChild(numeroNota[i]).gameObject.SetActive(false);
         }
+
+        if (SceneManager.GetActiveScene().name.Equals("Baul") || SceneManager.GetActiveScene().name.Equals("cajon"))
+        {
+            nota.SetActive(false);
+        }
     }
 
     public void ComprobarRepetidos()    //Comprueba si los objetos que están en la escena ya han sido recogidos y los elimina
@@ -163,12 +182,56 @@ public class Inventario : MonoBehaviour
                         numeroObjeto.Add(i);
                     }
                 }
+                if (objeto.transform.GetChild(i).name.Equals("Coche 1") && cocheUsado)
+                {
+                    numeroObjeto.Add(i);
+                }
+                if (objeto.transform.GetChild(i).name.Equals("Comic 1") && comicUsado)
+                {
+                    numeroObjeto.Add(i);
+                }
+                if (objeto.transform.GetChild(i).name.Equals("Barrena") && barrena)
+                {
+                    numeroObjeto.Add(i);
+                }
+                if (objeto.transform.GetChild(i).name.Contains("Fusible"))
+                {
+                    if (objeto.transform.GetChild(i).name.Contains("Azul") && fusibleAzul)
+                    {
+                        numeroObjeto.Add(i);
+                    }
+                    else if (objeto.transform.GetChild(i).name.Contains("Rojo") && fusibleRojo)
+                    {
+                        numeroObjeto.Add(i);
+                    }
+                    else if (objeto.transform.GetChild(i).name.Contains("Verde") && fusibleVerde)
+                    {
+                        numeroObjeto.Add(i);
+                    }
+                    else if (objeto.transform.GetChild(i).name.Contains("Blanco") && fusibleBlanco)
+                    {
+                        numeroObjeto.Add(i);
+                    }
+                    else if (objeto.transform.GetChild(i).name.Contains("Negro") && fusibleNegro)
+                    {
+                        numeroObjeto.Add(i);
+                    }
+                    else if (objeto.transform.GetChild(i).name.Contains("Amarillo") && fusibleAmarillo)
+                    {
+                        numeroObjeto.Add(i);
+                    }
+                }
             }
         }
 
         for (int i = 0; i < numeroObjeto.Count; i++)
         {
             objeto.transform.GetChild(numeroObjeto[i]).gameObject.SetActive(false);
+        }
+
+        if (SceneManager.GetActiveScene().name.Equals("Baul") || SceneManager.GetActiveScene().name.Equals("cajon"))
+        {
+            objeto.SetActive(false);
         }
     }
     public void AddItem(string itemname, Sprite itemsprite, string valorTag)    //Añade items del entorno al inventario
@@ -187,11 +250,6 @@ public class Inventario : MonoBehaviour
                 }
                 // HACER UN ELSE QUE HAGA UNA PEQUEÑA ANIMACION O ALGO QUE INDIQUE AL USUARIO QUE EL CRAFTEO ESTÁ LLENO
             }
-            print("La mamaeste no entra wei");
-        }
-        else
-        {
-            print("Eso no se hace. Si crafteas no recoges objetos manin");
         }
     }
     public void AddItemFromCraft(string itemname, Sprite itemsprite, string valorTag)   //Añade items del crafteo al inventario

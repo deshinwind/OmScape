@@ -15,7 +15,7 @@ public class panel : MonoBehaviour
     private void Start()
     {
         crafteo = GameObject.Find("Canvas2").GetComponent<Crafteo>();
-        //escaneop = gameObject.AddComponent<Animator>();
+        escaneop = gameObject.AddComponent<Animator>();
     }
 
     private void Update()
@@ -33,12 +33,11 @@ public class panel : MonoBehaviour
             
         }
     }
+
     public void neutro()
     {
         escaneop.SetBool("no", false);
-
     }
-
     public void fallaste()
     {
         escaneop.SetBool("no", true);
@@ -46,12 +45,11 @@ public class panel : MonoBehaviour
         Invoke("neutro", 0.5f);
 
     }
-
     public void acertaste()
     {
         escaneop.SetBool("si", true);
-
     }
+
 
     public void Escanear()
     {

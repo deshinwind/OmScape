@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -18,19 +19,27 @@ public class AlmacenNotas : MonoBehaviour
     public GameObject texto;
 
     public bool mostrandoNota;
+    public bool notaFalsaBool = false;
+
+    public GameObject pausa;
 
     public readonly int tamañoNarrativa = 5;
     public readonly int tamañoPosesion = 6;
+
     private void Update()
     {
-
-        if (Input.GetMouseButtonDown(1) && mostrandoNota) 
+        if (Input.GetKeyDown(KeyCode.Escape) && mostrandoNota && Time.timeScale == 0) 
         {
-
-            if (!nota.name.Equals("NotaFalsa"))
+            pausa.GetComponent<BoxCollider2D>().enabled = false;
+            Time.timeScale = 1;
+            if (!notaFalsaBool)
             {
                 texto.SetActive(true);
                 Invoke("Texto", 3f);
+            }
+            else
+            {
+                notaFalsaBool = false;
             }
 
             nota.SetActive(false);
@@ -94,9 +103,12 @@ public class AlmacenNotas : MonoBehaviour
     {
         mostrandoNota = true;
         nota.SetActive(true);
+        pausa.GetComponent<BoxCollider2D>().enabled = true;
+
         if (nombre.Equals("NotaFalsa"))
         {
             nota.GetComponent<Image>().sprite = notaFalsa;
+            notaFalsaBool = true;
         }
         else if (nombre.Contains("N"))
         {

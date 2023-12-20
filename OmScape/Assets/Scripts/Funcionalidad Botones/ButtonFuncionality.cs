@@ -9,7 +9,7 @@ public class ButtonFuncionality : MonoBehaviour
     public ObjetosActivos activos;
     private void Start()
     {
-        if (!gameObject.name.Equals("doble") || !gameObject.name.Equals("baul") || !gameObject.name.Equals("pc 1"))
+        if (gameObject.name.Equals("Canvas"))
         {
             FindObjectOfType<Inventario>().ComprobarRepetidos();       //Llamamos a la comprobación de los objetos repetidos al cambiar de escena
             FindObjectOfType<Inventario>().ComprobarFotosRepetidas();
@@ -23,21 +23,21 @@ public class ButtonFuncionality : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name.Equals("cajon"))
         {
-            if (Input.GetMouseButtonDown(1))
+            if (Input.GetMouseButtonDown(1) && Time.timeScale == 1)
             {
                 SceneManager.LoadScene("T3");
             }
         }
         if (SceneManager.GetActiveScene().name.Equals("Baul") || SceneManager.GetActiveScene().name.Equals("Mesita derecha") || SceneManager.GetActiveScene().name.Equals("Mesita izquierda"))
         {
-            if (Input.GetMouseButtonDown(1))
+            if (Input.GetMouseButtonDown(1) && Time.timeScale == 1)
             {
                 SceneManager.LoadScene("H2");
             }
         }
         if (SceneManager.GetActiveScene().name.Equals("mesaPC"))
         {
-            if (Input.GetMouseButtonDown(1))
+            if (Input.GetMouseButtonDown(1) && Time.timeScale == 1)
             {
                 SceneManager.LoadScene("H3");
             }

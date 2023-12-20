@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class cajadefusibles : MonoBehaviour
 {
     public Sprite bufandasprite;
+    public Sprite cajaDeFusiblesConFusible;
     private Animator animator;
     public ObjetosActivos activo;
 
@@ -23,6 +24,11 @@ public class cajadefusibles : MonoBehaviour
 
     void Update()
     {
+        if (activo.fusibles && activo.bufanda && activo.cajaDeFusibles && activo.candado)
+        {
+            Invoke("CambiarSprite", 0.5f);
+        }
+
         if(activo.bufanda && activo.candado)
         {
             gameObject.GetComponent<BoxCollider2D>().enabled = true;
@@ -31,6 +37,11 @@ public class cajadefusibles : MonoBehaviour
         {
             gameObject.GetComponent <BoxCollider2D>().enabled = false;
         }
+    }
+
+    public void CambiarSprite()
+    {
+        cajaDeFusiblesConFusible = null;
     }
 
     public void Abrir()
@@ -44,6 +55,28 @@ public class cajadefusibles : MonoBehaviour
             Invoke("Animacion", 0.15f);
         }
     }
+
+    /*public void Abrir()
+    {
+        for (int i = 0; i < inventario.tamañoMaximo; i++)
+        {
+            if (inventario.slotdeitems[i].thisItemSelected)
+            {
+                if (inventario.slotdeitems[i].CompareTag("Fusible Azul"))
+                {
+                    animator.SetTrigger("cajaclick");
+                    gameObject.GetComponent<BoxCollider2D>().enabled = false;
+                    activos.CajaDeFusibles();
+                    //Destroy(GetComponent<BoxCollider2D>());
+                    Invoke("Animacion", 0.15f);
+                }
+                else if (inventario.slotdeitems[i].itemName.Contains("Fusible"))
+                {
+                    inventario.slotdeitems[i].RemoveItem();
+                }
+            }
+        }
+    }*/
 
     void Animacion()
     {

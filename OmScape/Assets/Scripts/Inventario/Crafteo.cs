@@ -92,7 +92,6 @@ public class Crafteo : MonoBehaviour
         {
             if (slotdeitems[0].CompareTag("foto"))
             {
-                print("E UNA FOTO MARAVIOSA");
                 GameObject basura = Instantiate(prefabFoto);
                 inventario.AddObjetoCrafteado(basura.name, tagFoto);
                 Destroy(basura);
@@ -100,28 +99,28 @@ public class Crafteo : MonoBehaviour
             }
             else if (slotdeitems[0].CompareTag("ganzua"))
             {
-                print("A VER QUE HACER CON LA GANZUA. NOMURA CABRON");
                 GameObject basura = Instantiate(prefabGanzua);
                 inventario.AddObjetoCrafteado(basura.name, tagGanzua);
                 Destroy(basura);
                 ganzuaCrafteada = true;
             }
-            EliminarItem(0);
-            EliminarItem(1);
-        }
-        else
-        {  
-            if (slotdeitems[0].isfull)         //Comprueba que haya items en el primer slot del crafateo, lo envia al inventario y lo elimina
+            if (slotdeitems[0].CompareTag("ganzua") || slotdeitems[0].CompareTag("foto"))
             {
-                AñadirAInventario(0);
                 EliminarItem(0);
-            }
-            if (slotdeitems[1].isfull)         //Comprueba que haya items en el segundo slot del crafateo, lo envia al inventario y lo elimina
-            {
-                AñadirAInventario(1);
                 EliminarItem(1);
             }
         }
+
+        if (slotdeitems[0].isfull)         //Comprueba que haya items en el primer slot del crafateo, lo envia al inventario y lo elimina
+        {
+            AñadirAInventario(0);
+            EliminarItem(0);
+        }
+        if (slotdeitems[1].isfull)         //Comprueba que haya items en el segundo slot del crafateo, lo envia al inventario y lo elimina
+        {
+            AñadirAInventario(1);
+            EliminarItem(1);
+            }
     }
     public void AñadirAInventario(int indice)     //Envia los items del crafteo al inventario
     {

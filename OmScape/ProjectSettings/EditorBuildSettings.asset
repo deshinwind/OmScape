@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/menus/menuprincipal.unity
+    guid: d9740a6eb6fb5bb4ebf11965f73ca510
+  - enabled: 1
     path: "Assets/Scenes/Habitaci\xF3n/H1.unity"
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
@@ -35,9 +38,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Taller/T4.unity
     guid: 9753e640792f56b4e98c81861e82da27
-  - enabled: 1
-    path: Assets/Scenes/menus/menuprincipal.unity
-    guid: d9740a6eb6fb5bb4ebf11965f73ca510
   - enabled: 1
     path: "Assets/Scenes/Habitaci\xF3n/H3Objetos/Ordenador.unity"
     guid: a8e75245371a21c47a5cc0c466cd6370

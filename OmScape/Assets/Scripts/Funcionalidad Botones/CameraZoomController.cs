@@ -11,7 +11,8 @@ public class CameraZoomController : MonoBehaviour
     public bool[] zoomCheck;
     public float[] zoomController;
     [SerializeField] private Camera cam;
-    private float speed = 0.0125f;
+    private float speed = 0.1f;
+    //private float speed = 0.0125f;
     public GameObject botonesPanel;
     public GameObject[] botones;
     public Vector2[] posicionBotones;
@@ -64,7 +65,29 @@ public class CameraZoomController : MonoBehaviour
 
     private void Update()
     {
-        if (SceneManager.GetActiveScene().name.Equals("H2"))
+        if (SceneManager.GetActiveScene().name.Equals("H1"))
+        {
+            if (objetosActivos.bufanda && objetosActivos.cajaDeFusibles && objetosActivos.candado && !objetosActivos.boton.activeSelf && zoomCheck[1] && !objetosActivos.fusibles)
+            {
+                Invoke("ActivarBotonFusibles", 0.5f);
+            }
+
+            if (!zoomCheck[1])
+            {
+                objetosActivos.boton.SetActive(false);
+
+                if (!objetosActivos.bufanda) { if (objetos[0].activeSelf) { objetos[0].GetComponent<BoxCollider2D>().enabled = false; } }
+                if (!objetosActivos.cajaDeFusibles) { if (objetos[1].activeSelf) { objetos[1].GetComponent<BoxCollider2D>().enabled = false; } }
+            }
+            else
+            {
+                if (objetosActivos.cajaDeFusibles){ objetos[0].GetComponent<SpriteRenderer>().sortingOrder = 0; }
+                else { objetos[0].GetComponent<SpriteRenderer>().sortingOrder = 1; }
+                if (!objetosActivos.bufanda) { if (objetos[0].activeSelf) { objetos[0].GetComponent<BoxCollider2D>().enabled = true; } }
+                if (!objetosActivos.cajaDeFusibles) { if (objetos[1].activeSelf) { objetos[1].GetComponent<BoxCollider2D>().enabled = true; } }
+            }
+        }
+        else if (SceneManager.GetActiveScene().name.Equals("H2"))
         {
             if (zoomCheck[4])
             {
@@ -78,10 +101,14 @@ public class CameraZoomController : MonoBehaviour
             }
             else
             {
-                if (objetos[0].activeSelf) { objetos[0].GetComponent<BoxCollider2D>().enabled = false; }
-                if (objetos[1].activeSelf) { objetos[1].GetComponent<BoxCollider2D>().enabled = false; }
-                if (objetos[2].activeSelf) { objetos[2].GetComponent<BoxCollider2D>().enabled = false; }
-                if (notas[0].activeSelf) { notas[0].GetComponent<BoxCollider2D>().enabled = false; }
+                if (objetos[0] != null)
+                    if (objetos[0].activeSelf) { objetos[0].GetComponent<BoxCollider2D>().enabled = false; }
+                if (objetos[1] != null)
+                    if (objetos[1].activeSelf) { objetos[1].GetComponent<BoxCollider2D>().enabled = false; }
+                if (objetos[2] != null)
+                    if (objetos[2].activeSelf) { objetos[2].GetComponent<BoxCollider2D>().enabled = false; }
+                if (notas[0] != null)
+                    if (notas[0].activeSelf) { notas[0].GetComponent<BoxCollider2D>().enabled = false; }
             }
         }
         else if (SceneManager.GetActiveScene().name.Equals("H3"))
@@ -92,7 +119,11 @@ public class CameraZoomController : MonoBehaviour
             }
             else
             {
-                if (objetos[0].activeSelf) { objetos[0].GetComponent<BoxCollider2D>().enabled = false; }
+                if (objetos[0] != null)
+                {
+                    if (objetos[0].activeSelf) { objetos[0].GetComponent<BoxCollider2D>().enabled = false; }
+                }
+                
             }
         }
         else if (SceneManager.GetActiveScene().name.Equals("H4"))
@@ -108,31 +139,21 @@ public class CameraZoomController : MonoBehaviour
             }
             else
             {
-                if (objetos[0].activeSelf) { objetos[0].GetComponent<BoxCollider2D>().enabled = false; }
-                if (notas[0].activeSelf) { notas[0].GetComponent<BoxCollider2D>().enabled = false; }
-                if (notas[1].activeSelf) { notas[1].GetComponent<BoxCollider2D>().enabled = false; }
-            }
-        }
-        else if (SceneManager.GetActiveScene().name.Equals("H1"))
-        {
-            if (zoomCheck[1])
-            {
-                //if(objetosActivos.bufanda){ objetos[0].GetComponent<SpriteRenderer>().sortingOrder = 1; }
-                if (!objetosActivos.bufanda) { if (objetos[0].activeSelf) { objetos[0].GetComponent<BoxCollider2D>().enabled = true; } }
-                if (!objetosActivos.cajaDeFusibles) { if (objetos[1].activeSelf) { objetos[1].GetComponent<BoxCollider2D>().enabled = true; } }
-            }
-            else
-            {
-                if (!objetosActivos.bufanda) { if (objetos[0].activeSelf) { objetos[0].GetComponent<BoxCollider2D>().enabled = false; } }
-                if (!objetosActivos.cajaDeFusibles) { if (objetos[1].activeSelf) { objetos[1].GetComponent<BoxCollider2D>().enabled = false; } }
+                if (objetos[0] != null)
+                    if (objetos[0].activeSelf) { objetos[0].GetComponent<BoxCollider2D>().enabled = false; }
+                if (notas[0] != null)
+                    if (notas[0].activeSelf) { notas[0].GetComponent<BoxCollider2D>().enabled = false; }
+                if (notas[1] != null)
+                    if (notas[1].activeSelf) { notas[1].GetComponent<BoxCollider2D>().enabled = false; }
             }
         }
     }
 
     public void LateUpdate()
     {
-        Zoom();
         
+        Zoom();
+
         if (!botonesPanel.activeInHierarchy)
         {
             if (!(EventSystem.current.currentSelectedGameObject == null))
@@ -143,13 +164,18 @@ public class CameraZoomController : MonoBehaviour
                 }
             }
 
-            if (Input.GetMouseButtonDown(1))
+            if (Input.GetMouseButtonDown(1) && Time.timeScale == 1)
             {
                 zoomCheck[n] = false;
                 n = 0;
                 Invoke("ActivarBotones", 0.35f);
             }
         }
+    }
+
+    public void ActivarBotonFusibles()
+    {
+        objetosActivos.boton.SetActive(true);
     }
 
     public void Zoom()

@@ -32,7 +32,7 @@ public class BotonesOrdenador : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1) && Time.timeScale == 1)
         {
             if (notaActiva)
             {
