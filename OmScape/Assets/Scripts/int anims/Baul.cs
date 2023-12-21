@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class Baul : MonoBehaviour
 {
-    public Sprite baulsprite;
-    private Animator animator;
-    public ObjetosActivos activos;
-
     public GameObject objetos;
     public GameObject notas;
+
     public Inventario inventario;
+
+    public Sprite baulsprite;
+    
+    public ObjetosActivos activos;
+
+    private Animator animator;
 
     public void Awake()
     {
@@ -31,7 +34,7 @@ public class Baul : MonoBehaviour
     {
         animator.SetTrigger("baul");
         gameObject.GetComponent<BoxCollider2D>().enabled = false;
-        activos.Baul();
+        activos.baul = true;
 
         Invoke("Animacion", 0.15f);
         Invoke("ActivarObjetos", 0.5f);

@@ -7,9 +7,11 @@ using UnityEngine.UI;
 
 public class bufanda : MonoBehaviour
 {
-    public Sprite bufandasprite;
-    private Animator animator;
     public ObjetosActivos activos;
+
+    public Sprite bufandasprite;
+    
+    private Animator animator;
 
     public void Awake()
     {
@@ -28,8 +30,7 @@ public class bufanda : MonoBehaviour
     {
         animator.SetTrigger("estapulsadabufanda");
         gameObject.GetComponent<BoxCollider2D>().enabled = false;
-        activos.Bufanda();
-        //Destroy(GetComponent<BoxCollider2D>());
+        activos.bufanda = true;
         Invoke("Animacion", 0.15f);
     }
 

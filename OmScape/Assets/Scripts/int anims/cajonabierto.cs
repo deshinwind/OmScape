@@ -8,8 +8,8 @@ using UnityEngine.UI;
 public class cajonabierto : MonoBehaviour
 {
     public Sprite cajonsprite;
-    private Animator animator;
 
+    private Animator animator;
 
     public void Awake()
     {
@@ -23,14 +23,11 @@ public class cajonabierto : MonoBehaviour
             animator.SetTrigger("cajontrigger");
             Destroy(GetComponent<BoxCollider2D>());
             Invoke("Prueba", 0.15f);
-
         }
     }
     void Prueba()
     {
         animator.SetTrigger("cajontrigger");
         GameObject.Find("cajon").GetComponent<SpriteRenderer>().sprite = cajonsprite;
-
     }
-
 }

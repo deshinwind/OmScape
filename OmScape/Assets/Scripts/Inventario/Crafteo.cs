@@ -8,24 +8,26 @@ using UnityEngine.UIElements;
 
 public class Crafteo : MonoBehaviour
 {
-    public GameObject crafteoMenu;
-    public GameObject inventarioMenu;
     public bool crafteoActivo;
     public bool crafteado;
+    public bool fotoCrafteada = false;
+    public bool ganzuaCrafteada = false;
+
+    public GameObject crafteoMenu;
+    public GameObject inventarioMenu;
     public GameObject prefabFoto;
     public GameObject prefabGanzua;
 
     public slotdeitems[] slotdeitems;
 
-    [SerializeField] private Inventario inventario;
+    public Inventario inventario;
 
-    private readonly string tagGanzua = "GanzuaCompleta";
-    private readonly string tagFoto = "Sensor";
+    public MostrarObjetos mostrador;
 
-    private readonly int tamañoMaximo = 2;
+    private int tamañoMaximo = 2;
 
-    public bool fotoCrafteada = false;
-    public bool ganzuaCrafteada = false;
+    private string tagGanzua = "GanzuaCompleta";
+    private string tagFoto = "Sensor";
 
     void Update()
     {
@@ -95,6 +97,7 @@ public class Crafteo : MonoBehaviour
                 GameObject basura = Instantiate(prefabFoto);
                 inventario.AddObjetoCrafteado(basura.name, tagFoto);
                 Destroy(basura);
+                mostrador.MostrarObjeto("FotoCompleta");
                 fotoCrafteada = true;
             }
             else if (slotdeitems[0].CompareTag("ganzua"))
@@ -102,6 +105,7 @@ public class Crafteo : MonoBehaviour
                 GameObject basura = Instantiate(prefabGanzua);
                 inventario.AddObjetoCrafteado(basura.name, tagGanzua);
                 Destroy(basura);
+                mostrador.MostrarObjeto("GanzuaCompleta");
                 ganzuaCrafteada = true;
             }
             if (slotdeitems[0].CompareTag("ganzua") || slotdeitems[0].CompareTag("foto"))

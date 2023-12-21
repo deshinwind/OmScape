@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class PausarJuego : MonoBehaviour
 {
-    public GameObject pausarJuego;
     public bool pausado;
+
+    public GameObject pausarJuego;
     
     private void Update()
     {

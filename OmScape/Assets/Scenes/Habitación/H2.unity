@@ -222,7 +222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemname: 
-  sprite: {fileID: 21300000, guid: 2cdbc86aa7728b04f90d984541e43bb1, type: 3}
+  spriteObjeto: {fileID: 21300000, guid: 2cdbc86aa7728b04f90d984541e43bb1, type: 3}
 --- !u!61 &20446785
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1667,6 +1667,7 @@ MonoBehaviour:
   - 1.24
   - 2.42
   - 1
+  posicionBotones: []
   cam: {fileID: 1277767961}
   botonesPanel: {fileID: 1880244675}
   botones:
@@ -1675,10 +1676,9 @@ MonoBehaviour:
   - {fileID: 160445015}
   - {fileID: 449114016}
   - {fileID: 897604813}
-  posicionBotones: []
-  objetosActivos: {fileID: 0}
   objetos: []
   notas: []
+  objetosActivos: {fileID: 0}
 --- !u!1 &1249118836
 GameObject:
   m_ObjectHideFlags: 0
@@ -1689,8 +1689,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1249118837}
   - component: {fileID: 1249118838}
-  - component: {fileID: 1249118840}
   - component: {fileID: 1249118842}
+  - component: {fileID: 1249118840}
   m_Layer: 0
   m_Name: Coche 3
   m_TagString: NoCraft
@@ -1778,7 +1778,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemname: 
-  sprite: {fileID: 21300000, guid: 2a454dfdfa39a224a8c466488018b891, type: 3}
+  spriteObjeto: {fileID: 21300000, guid: 2a454dfdfa39a224a8c466488018b891, type: 3}
 --- !u!61 &1249118842
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2270,8 +2270,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1506543462}
   - component: {fileID: 1506543463}
-  - component: {fileID: 1506543465}
   - component: {fileID: 1506543467}
+  - component: {fileID: 1506543465}
   m_Layer: 0
   m_Name: Coche 2
   m_TagString: NoCraft
@@ -2359,7 +2359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemname: 
-  sprite: {fileID: 21300000, guid: 4912d954060bb5e4b8c5e02ac66c4861, type: 3}
+  spriteObjeto: {fileID: 21300000, guid: 4912d954060bb5e4b8c5e02ac66c4861, type: 3}
 --- !u!61 &1506543467
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2437,7 +2437,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemname: 
-  sprite: {fileID: 21300000, guid: 2948ba7e4856cc54ba3ac0229125f626, type: 3}
+  spriteObjeto: {fileID: 0}
 --- !u!61 &1522156528
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -2,11 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ButtonFuncionality : MonoBehaviour
 {
+    public bool fin;
+
+    public GameObject fundido;
+
     public panel panel;
+
     public ObjetosActivos activos;
+
+    private float speed = 0.1f;
+
     private void Start()
     {
         if (gameObject.name.Equals("Canvas"))
@@ -21,6 +30,14 @@ public class ButtonFuncionality : MonoBehaviour
 
     void Update()
     {
+        if (fin)
+        {
+            print("ey");
+            fundido.SetActive(true);
+            fundido.GetComponent<Image>().color = new Color(fundido.GetComponent<Image>().color.r, fundido.GetComponent<Image>().color.g, fundido.GetComponent<Image>().color.b , Mathf.Lerp(fundido.GetComponent<Image>().color.a, 1f, speed));
+            Invoke("Exit", 1f);
+        }
+
         if (SceneManager.GetActiveScene().name.Equals("cajon"))
         {
             if (Input.GetMouseButtonDown(1) && Time.timeScale == 1)
@@ -44,13 +61,18 @@ public class ButtonFuncionality : MonoBehaviour
         }
     }
 
+    public void Exit()
+    {
+        SceneManager.LoadScene("Exit");
+    }
+
     public void ButtonExit()
     {
         if (activos  != null)
         {
             if (activos.fusibles)
             {
-                SceneManager.LoadScene("Exit");
+                fin = true;
             }
         }
     }

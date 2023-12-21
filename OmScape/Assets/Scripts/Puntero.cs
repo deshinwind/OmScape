@@ -2,9 +2,11 @@ using UnityEngine;
 
 public class Puntero : MonoBehaviour
 {
-    public GameObject objeto;
-    public string[] listaObjetos;
     public bool correcto;
+
+    public string[] listaObjetos;
+
+    public GameObject objeto;
 
     void Update()
     {

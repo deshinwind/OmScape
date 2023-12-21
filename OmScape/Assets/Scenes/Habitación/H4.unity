@@ -425,6 +425,7 @@ MonoBehaviour:
   - 2
   - 1.8
   - 1.8
+  posicionBotones: []
   cam: {fileID: 638790918}
   botonesPanel: {fileID: 432586570}
   botones:
@@ -434,11 +435,9 @@ MonoBehaviour:
   - {fileID: 870233521}
   - {fileID: 1636334397}
   - {fileID: 599123911}
-  posicionBotones: []
-  objetosActivos: {fileID: 0}
   objetos: []
   notas: []
-  botonFinal: {fileID: 0}
+  objetosActivos: {fileID: 0}
 --- !u!4 &506175578
 Transform:
   m_ObjectHideFlags: 0
@@ -1858,7 +1857,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemname: 
-  sprite: {fileID: 21300000, guid: f0cb6157fc9823746a5bf799d219d395, type: 3}
+  spriteObjeto: {fileID: 21300000, guid: f0cb6157fc9823746a5bf799d219d395, type: 3}
 --- !u!212 &1611027606
 SpriteRenderer:
   m_ObjectHideFlags: 0

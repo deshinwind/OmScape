@@ -278,9 +278,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80cb30ad53ea9a64ebe3002003b42515, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doblefondosprite: {fileID: -2133406746, guid: 771c443d5ff234340a8aaccee1fcb5cf, type: 3}
   objetos: {fileID: 1349278111}
   notas: {fileID: 333471805}
+  doblefondosprite: {fileID: -2133406746, guid: 771c443d5ff234340a8aaccee1fcb5cf, type: 3}
   inventario: {fileID: 0}
   activos: {fileID: 0}
 --- !u!61 &572233030
@@ -389,7 +389,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemname: 
-  sprite: {fileID: 21300000, guid: 3a6c8f6c241b6e941815b5386577db82, type: 3}
+  spriteObjeto: {fileID: 21300000, guid: 3a6c8f6c241b6e941815b5386577db82, type: 3}
 --- !u!212 &608062638
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -602,7 +602,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemname: 
-  sprite: {fileID: 21300000, guid: 9091b20ef60763040b47d982d910dae9, type: 3}
+  spriteObjeto: {fileID: 21300000, guid: 9091b20ef60763040b47d982d910dae9, type: 3}
 --- !u!212 &677009690
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -747,7 +747,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemname: 
-  sprite: {fileID: 21300000, guid: 378df9c93941a294393439fb1e10ec53, type: 3}
+  spriteObjeto: {fileID: 21300000, guid: 378df9c93941a294393439fb1e10ec53, type: 3}
 --- !u!212 &805163420
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -892,7 +892,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemname: 
-  sprite: {fileID: 21300000, guid: a3a12bc764787744781ed84ea2aafb64, type: 3}
+  spriteObjeto: {fileID: 21300000, guid: a3a12bc764787744781ed84ea2aafb64, type: 3}
 --- !u!212 &932450653
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1384,7 +1384,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemname: 
-  sprite: {fileID: 21300000, guid: 05ffaa5cadb105e4e9327fbb47397c08, type: 3}
+  spriteObjeto: {fileID: 21300000, guid: 05ffaa5cadb105e4e9327fbb47397c08, type: 3}
 --- !u!212 &1427482515
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1811,7 +1811,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemname: 
-  sprite: {fileID: 21300000, guid: 72d72da28efe513488dbf14a89b9a302, type: 3}
+  spriteObjeto: {fileID: 21300000, guid: 72d72da28efe513488dbf14a89b9a302, type: 3}
 --- !u!212 &1951238025
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -7,14 +7,16 @@ using UnityEngine.UI;
 
 public class doblefondo : MonoBehaviour
 {
-    public Sprite doblefondosprite;
-    private Animator animator;
-
     public GameObject objetos;
     public GameObject notas;
+
+    public Sprite doblefondosprite;
+
     public Inventario inventario;
 
     public ObjetosActivos activos;
+
+    private Animator animator;
 
     public void Awake()
     {
@@ -34,15 +36,6 @@ public class doblefondo : MonoBehaviour
 
     public void Abrir()
     {
-        //print(activos.cajon);
-        /*if (activos.cajon)
-        {
-            animator.SetTrigger("doblefondotrigger");
-            Invoke("AnimacionCajon", 0.15f);
-            Invoke("ActivarObjetos", 1f);
-        }
-        else
-        {*/
         if (inventario.cajonAbierto)
         {
             animator.SetTrigger("doblefondotrigger");
@@ -68,8 +61,6 @@ public class doblefondo : MonoBehaviour
                 }
             }
         }
-            
-            
     }
 
     void AnimacionCajon()

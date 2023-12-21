@@ -5,9 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class menupausa : MonoBehaviour
 {
-    public GameObject menudepausa;
     public bool ispaused;
-
+    public GameObject menudepausa;
 
     void Start()
     {
@@ -18,7 +17,6 @@ public class menupausa : MonoBehaviour
     {
         if(Input.GetKeyDown("p"))
         {
-
             if (ispaused)
             {
                 Resumegame();
@@ -28,7 +26,6 @@ public class menupausa : MonoBehaviour
                 PauseGame();
             }
         }
-        
     }
 
     public void PauseGame()
@@ -55,5 +52,4 @@ public class menupausa : MonoBehaviour
     {
         Application.Quit();
     }
-
 }

@@ -17,13 +17,12 @@ public class BotonesOrdenador : MonoBehaviour
     public GameObject[] pos;
 
     private bool notaActiva;
-    private string nota;
-
-
-    private AlmacenNotas almacen;
-
     private bool comprobarPosesiones = true;
     private bool comprobarNarrativa = true;
+
+    private string nota;
+
+    private AlmacenNotas almacen;
 
     private void Start()
     {
@@ -192,7 +191,4 @@ public class BotonesOrdenador : MonoBehaviour
     {
         SceneManager.LoadScene("H3");
     }
-    
-    
-
 }

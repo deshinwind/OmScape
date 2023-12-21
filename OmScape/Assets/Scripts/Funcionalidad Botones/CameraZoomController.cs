@@ -9,21 +9,25 @@ using UnityEngine.UI;
 public class CameraZoomController : MonoBehaviour
 {
     public bool[] zoomCheck;
+    
     public float[] zoomController;
-    [SerializeField] private Camera cam;
-    private float speed = 0.1f;
-    //private float speed = 0.0125f;
-    public GameObject botonesPanel;
-    public GameObject[] botones;
+
     public Vector2[] posicionBotones;
 
-    private float zoomDefault = 5;
+    public Camera cam;
+
+    public GameObject botonesPanel;
+    public GameObject[] botones;
+    public GameObject[] objetos;
+    public GameObject[] notas;
+
+    public ObjetosActivos objetosActivos;
+
     private int n = 0;
     private int numeroBotones;
 
-    public ObjetosActivos objetosActivos;
-    public GameObject[] objetos;
-    public GameObject[] notas;
+    private float speed = 0.1f;
+    private float zoomDefault = 5;
 
     void Start()
     {
@@ -82,7 +86,7 @@ public class CameraZoomController : MonoBehaviour
             else
             {
                 if (objetosActivos.cajaDeFusibles){ objetos[0].GetComponent<SpriteRenderer>().sortingOrder = 0; }
-                else { objetos[0].GetComponent<SpriteRenderer>().sortingOrder = 1; }
+                else { objetos[0].GetComponent<SpriteRenderer>().sortingOrder = 2; }
                 if (!objetosActivos.bufanda) { if (objetos[0].activeSelf) { objetos[0].GetComponent<BoxCollider2D>().enabled = true; } }
                 if (!objetosActivos.cajaDeFusibles) { if (objetos[1].activeSelf) { objetos[1].GetComponent<BoxCollider2D>().enabled = true; } }
             }
@@ -151,7 +155,6 @@ public class CameraZoomController : MonoBehaviour
 
     public void LateUpdate()
     {
-        
         Zoom();
 
         if (!botonesPanel.activeInHierarchy)
@@ -210,7 +213,6 @@ public class CameraZoomController : MonoBehaviour
             }
         }
     }
-
     public void ZoomCheck()
     {
         if (zoomCheck[n])

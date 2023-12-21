@@ -8,21 +8,24 @@ using UnityEngine.UI;
 
 public class slotdeitems : MonoBehaviour, IPointerClickHandler
 {
-    //=====itemslot=====//
-    public string itemName;
-    public Sprite itemsprite;
     public bool isfull;
-
-    //=====itemslot=====//
-    public Image itemimage;
-
-    public GameObject selectedshader;
     public bool thisItemSelected;
 
-    private Inventario inventario;
-    private Crafteo crafteo;
-    private AlmacenSensor almacen;
+    public string itemName;
+
+    public GameObject selectedshader;
+
+    public Sprite itemsprite;
     public Sprite spriteAuxiliar;
+
+    public Image itemimage;
+
+    private Inventario inventario;
+
+    private Crafteo crafteo;
+
+    private AlmacenSensor almacen;
+    
 
     private void Start()
     {

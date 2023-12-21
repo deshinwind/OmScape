@@ -367,7 +367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 630c2668357b50245aeb2f73ec3742ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objeto: {fileID: 2021444790}
+  correcto: 0
   listaObjetos:
   - Coche 1
   - Coche 2
@@ -387,7 +387,7 @@ MonoBehaviour:
   - P3
   - P4
   - P5
-  correcto: 0
+  objeto: {fileID: 2021444790}
 --- !u!4 &1774881210
 Transform:
   m_ObjectHideFlags: 0
@@ -602,7 +602,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemname: 
-  sprite: {fileID: 21300000, guid: 826cb3224b78bbc4f8df607337af191d, type: 3}
+  spriteObjeto: {fileID: 21300000, guid: 826cb3224b78bbc4f8df607337af191d, type: 3}
 --- !u!212 &2021444792
 SpriteRenderer:
   m_ObjectHideFlags: 0

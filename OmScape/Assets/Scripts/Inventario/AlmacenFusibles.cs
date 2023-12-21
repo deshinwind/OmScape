@@ -5,15 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class AlmacenFusibles : MonoBehaviour
 {
-    public slotdeitems slot;
-
-    public Inventario inventario;
-    public ObjetosActivos activos;
-    public CameraZoomController zoomController;
-
     public bool enviado;
     public bool desactivada = true;
 
+    public slotdeitems slot;
+
+    public Inventario inventario;
+
+    public ObjetosActivos activos;
+
+    public CameraZoomController zoomController;
 
     void Start()
     {

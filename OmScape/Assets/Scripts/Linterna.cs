@@ -8,9 +8,10 @@ using UnityEngine.SceneManagement;
 
 public class Linterna : MonoBehaviour
 {
-    //public GameObject linterna;
     public bool linternaActiva;
+
     public Inventario inventario;
+
     public ObjetosActivos objetosActivos;
 
     public Sprite linternaSprite;

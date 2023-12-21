@@ -49,52 +49,6 @@ public class ObjetosActivos : MonoBehaviour
 
     }
 
-    public void Bufanda()
-    {
-        bufanda = true;
-    }
-
-    public void CajaDeFusibles()
-    {
-        cajaDeFusibles = true;
-    }
-
-    public void Cajon()
-    {
-        cajon = true;
-    }
-
-    public void Baul()
-    {
-        baul = true;
-    }
-
-    public void Candado()
-    {
-        candado = true;
-    }
-
-    public void Fusibles()
-    {
-        fusibles = true;
-    }
-
-    /*public void FuncionControlFusibles()
-    {
-        for (int i = 0; i < inventario.slotdeitems.Length; i++)
-        {
-            if (inventario.slotdeitems[i].itemName.Equals("Fusible Azul"))
-            {
-                print("final");
-                fusibles = true;
-                boton.SetActive(false);
-                // CAMBIAR LA ANIMACION Y DEJAR EL FUSIBLE PUESTO
-                GameObject.Find("Linterna").GetComponent<Linterna>().LinternaDesactivada();
-                break;
-            }
-        }
-    }*/
-
     public void FuncionControlFusibles()
     {
         for (int i = 0; i < inventario.tamañoMaximo; i++)
@@ -113,19 +67,6 @@ public class ObjetosActivos : MonoBehaviour
                     }
                     inventario.slotdeitems[i].RemoveItem();
                 }
-                /*if (inventario.slotdeitems[i].itemName.Equals("Fusible Azul"))
-                {
-                    print("final");
-                    fusibles = true;
-                    boton.SetActive(false);
-                    // CAMBIAR LA ANIMACION Y DEJAR EL FUSIBLE PUESTO
-                    GameObject.Find("Linterna").GetComponent<Linterna>().LinternaDesactivada();
-                    break;
-                }
-                else if (inventario.slotdeitems[i].itemName.Contains("Fusible"))
-                {
-                    inventario.slotdeitems[i].RemoveItem();
-                }*/
             }
         }
     }

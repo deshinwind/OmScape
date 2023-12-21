@@ -1,40 +1,18 @@
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Inventario : MonoBehaviour
 {
-    public GameObject inventorymenu;
-    public GameObject crafteoMenu;
     public bool inventarioActivo;
     public bool recolectado;
-    public slotdeitems[] slotdeitems;
-    [SerializeField] private Crafteo crafteo;
-
-    public GameObject objeto;
-    public GameObject nota;
-
-    public AlmacenNotas almacen;
-
-    public int tamañoMaximo = 6;
-
-    public Sprite foto;
-    public Sprite ganzua;
-    
-    public static Inventario instancia;
-
-    private List<int> numeroObjeto;
-    private List<int> numeroNota;
-
     public bool linterna;
     public bool dobleFondo;
-
     public bool cajonAbierto;
-
     public bool comicUsado = false;
     public bool cocheUsado = false;
-
     public bool fusibleAzul = false;
     public bool fusibleVerde = false;
     public bool fusibleRojo = false;
@@ -42,6 +20,28 @@ public class Inventario : MonoBehaviour
     public bool fusibleNegro = false;
     public bool fusibleAmarillo = false;
     public bool barrena = false;
+
+    public int tamañoMaximo = 6;
+
+    public GameObject inventorymenu;
+    public GameObject crafteoMenu;
+    public GameObject objeto;
+    public GameObject nota;
+
+    public Sprite foto;
+    public Sprite ganzua;
+    public slotdeitems[] slotdeitems;
+
+    public Crafteo crafteo;
+
+    public AlmacenNotas almacen;
+
+    public static Inventario instancia;
+
+    private List<int> numeroObjeto;
+    private List<int> numeroNota;
+
+    
 
     private void Start()
     {
@@ -301,5 +301,18 @@ public class Inventario : MonoBehaviour
             slotdeitems[i].selectedshader.SetActive(false);
             slotdeitems[i].thisItemSelected = false;
         }
+    }
+
+    public bool InventarioLleno()
+    {
+        for (int i = 0; i < tamañoMaximo; i++)
+        {
+            if (!slotdeitems[i].isfull)
+            {
+                return false;
+            }
+        }
+
+        return true;
     }
 }

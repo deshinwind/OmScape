@@ -9,9 +9,11 @@ public class cajadefusibles : MonoBehaviour
 {
     public Sprite bufandasprite;
     public Sprite cajaDeFusiblesConFusible;
-    private Animator animator;
+
     public ObjetosActivos activo;
 
+    private Animator animator;
+    
     public void Awake()
     {
         animator = GetComponent<Animator>();
@@ -50,39 +52,14 @@ public class cajadefusibles : MonoBehaviour
         {
             animator.SetTrigger("cajaclick");
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
-            activo.CajaDeFusibles();
-            //Destroy(GetComponent<BoxCollider2D>());
+            activo.cajaDeFusibles = true;
             Invoke("Animacion", 0.15f);
         }
     }
-
-    /*public void Abrir()
-    {
-        for (int i = 0; i < inventario.tamañoMaximo; i++)
-        {
-            if (inventario.slotdeitems[i].thisItemSelected)
-            {
-                if (inventario.slotdeitems[i].CompareTag("Fusible Azul"))
-                {
-                    animator.SetTrigger("cajaclick");
-                    gameObject.GetComponent<BoxCollider2D>().enabled = false;
-                    activos.CajaDeFusibles();
-                    //Destroy(GetComponent<BoxCollider2D>());
-                    Invoke("Animacion", 0.15f);
-                }
-                else if (inventario.slotdeitems[i].itemName.Contains("Fusible"))
-                {
-                    inventario.slotdeitems[i].RemoveItem();
-                }
-            }
-        }
-    }*/
 
     void Animacion()
     {
         animator.SetTrigger("cajaclick");
         GameObject.Find("caja de fusibles").GetComponent<SpriteRenderer>().sprite = bufandasprite;
-
     }
-
 }

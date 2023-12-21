@@ -285,7 +285,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemname: 
-  sprite: {fileID: 21300000, guid: 2a0d77a6bb573ac4eb706f36b2047334, type: 3}
+  spriteObjeto: {fileID: 21300000, guid: 2a0d77a6bb573ac4eb706f36b2047334, type: 3}
 --- !u!61 &527327793
 BoxCollider2D:
   m_ObjectHideFlags: 0

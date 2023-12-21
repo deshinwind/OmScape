@@ -4,19 +4,23 @@ using UnityEngine.SceneManagement;
 
 public class Crafteable : MonoBehaviour, IPointerClickHandler
 {
-    [SerializeField] private string itemname;
-    [SerializeField] private Sprite sprite;
+
+    public string itemname;
+    public Sprite sprite;
+    public string itemNameAux;
+    public string tagAux;
+
+    public Sprite itemspriteAux;
 
     private Crafteo crafteo;
+
     private panel panel;
+
     private AlmacenSensor almacen;
+
     public AlmacenFusibles alamcenFusibles;
 
     public slotdeitems slot;
-
-    public string itemNameAux;
-    public Sprite itemspriteAux;
-    public string tagAux;
 
     void Start()
     {
@@ -47,7 +51,14 @@ public class Crafteable : MonoBehaviour, IPointerClickHandler
             {
                 if (SceneManager.GetActiveScene().name.Equals("panel"))
                 {
-                    EnviarAEscaner();
+                    if (slot.name.Contains("Escaner"))
+                    {
+                        EnviarAInventario();
+                    }
+                    else
+                    {
+                        EnviarAEscaner();
+                    }
                 }
             }
             else
@@ -56,6 +67,13 @@ public class Crafteable : MonoBehaviour, IPointerClickHandler
             }
         }
     }
+
+    public void EnviarAInventario()
+    {
+        GameObject.Find("Canvas2").GetComponent<Inventario>().AddItemFromCraft(gameObject.GetComponent<slotdeitems>().itemName, slot.itemsprite, gameObject.tag);
+        slot.RemoveItem();
+    }
+
     public void EnviarACrafteo()    //Envia el item del inventario al crafteo
     {
         if (crafteo.crafteoActivo)

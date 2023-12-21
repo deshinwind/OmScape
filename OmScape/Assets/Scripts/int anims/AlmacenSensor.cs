@@ -1,17 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class AlmacenSensor : MonoBehaviour
 {
-    private int tamañoMaximo = 3;
+    public bool enviado;
 
-    public slotdeitems[] slot;
     public panel panel;
     public panel panel2;
+
+    public slotdeitems[] slot;
+    
     public Inventario inventario;
 
-    public bool enviado;
+    private int tamañoMaximo = 3;
 
     private void Start()
     {
@@ -88,7 +92,6 @@ public class AlmacenSensor : MonoBehaviour
                 enviado = true;
                 return;
             }
-            // HACER UN ELSE QUE HAGA UNA PEQUEÑA ANIMACION O ALGO QUE INDIQUE AL USUARIO QUE EL CRAFTEO ESTÁ LLENO
         }
     }
 

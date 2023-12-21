@@ -5,12 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class panel : MonoBehaviour
 {
-    [SerializeField] private ParticleSystem particulas;
     public bool escaneado = false;
-    public Crafteo crafteo;
-    public Animator escaneop;
-
     public bool desactivada = true;
+
+    public Crafteo crafteo;
+
+    public ParticleSystem particulas;
+    
+    public Animator escaneop;
 
     private void Start()
     {
@@ -30,7 +32,6 @@ public class panel : MonoBehaviour
                     desactivada = false;
                 }
             }
-            
         }
     }
 
@@ -43,13 +44,11 @@ public class panel : MonoBehaviour
         escaneop.SetBool("no", true);
         particulas.Play();
         Invoke("neutro", 0.5f);
-
     }
     public void acertaste()
     {
         escaneop.SetBool("si", true);
     }
-
 
     public void Escanear()
     {

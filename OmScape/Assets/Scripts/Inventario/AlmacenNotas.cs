@@ -8,23 +8,21 @@ using UnityEngine.UI;
 
 public class AlmacenNotas : MonoBehaviour
 {
+    public bool mostrandoNota;
+    public bool notaFalsaBool = false;
     public bool[] notasNarrativa;
     public bool[] notasPosesiones;
 
+    public int tamañoNarrativa = 5;
+    public int tamañoPosesion = 6;
+
+    public Sprite notaFalsa;
     public Sprite[] narrativa;
     public Sprite[] posesion;
-    public Sprite notaFalsa;
 
     public GameObject nota;
     public GameObject texto;
-
-    public bool mostrandoNota;
-    public bool notaFalsaBool = false;
-
     public GameObject pausa;
-
-    public readonly int tamañoNarrativa = 5;
-    public readonly int tamañoPosesion = 6;
 
     private void Update()
     {
