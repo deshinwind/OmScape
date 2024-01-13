@@ -16,6 +16,8 @@ public class ObjetosActivos : MonoBehaviour
     public GameObject cajonO;
     public GameObject boton;
 
+    public AudioClip sonidoPuerta;
+
     public Sprite cajonSprit;
 
     public Inventario inventario;
@@ -24,6 +26,15 @@ public class ObjetosActivos : MonoBehaviour
 
     private void Update()
     {
+        if (SceneManager.GetActiveScene().name.Equals("Exit") || SceneManager.GetActiveScene().name.Equals("menuprincipal") || SceneManager.GetActiveScene().name.Equals("controles"))
+        {
+            GetComponent<AudioSource>().enabled = false;
+        }
+        else
+        {
+            GetComponent<AudioSource>().enabled = true;
+        }
+
         if (SceneManager.GetActiveScene().name.Equals("H1") && bufandaO == null)
         {
             bufandaO = GameObject.Find("bufanda");
@@ -57,13 +68,13 @@ public class ObjetosActivos : MonoBehaviour
             {
                 if (inventario.slotdeitems[i].itemName.Contains("Fusible"))
                 {
-                    if (inventario.slotdeitems[i].itemName.Equals("Fusible Azul"))
+                    if (inventario.slotdeitems[i].itemName.Equals("FusibleAzul"))
                     {
-                        print("final");
                         fusibles = true;
                         boton.SetActive(false);
-                        // CAMBIAR LA ANIMACION Y DEJAR EL FUSIBLE PUESTO
+                        // CAMBIAR LA ANIMACION DE LA CAJA DE FUSIBLES Y DEJAR EL FUSIBLE PUESTO
                         GameObject.Find("Linterna").GetComponent<Linterna>().LinternaDesactivada();
+                        GameObject.Find("ControladorSonido").GetComponent<ControladorSonido>().EjecutarSonido(sonidoPuerta);
                     }
                     inventario.slotdeitems[i].RemoveItem();
                 }

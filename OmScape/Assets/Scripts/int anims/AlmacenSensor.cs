@@ -8,6 +8,8 @@ public class AlmacenSensor : MonoBehaviour
 {
     public bool enviado;
 
+    public AudioClip sonidoPuerta;
+
     public panel panel;
     public panel panel2;
 
@@ -19,7 +21,7 @@ public class AlmacenSensor : MonoBehaviour
 
     private void Start()
     {
-        inventario = GameObject.Find("Canvas2").GetComponent<Inventario>();
+        inventario = GameObject.Find("Inventario").GetComponent<Inventario>();
         panel2 = GameObject.Find("Canvas2").GetComponent <panel>();
     }
 
@@ -35,6 +37,8 @@ public class AlmacenSensor : MonoBehaviour
 
             inventario.comicUsado = true;
             inventario.cocheUsado = true;
+
+            GameObject.Find("ControladorSonido").GetComponent<ControladorSonido>().EjecutarSonido(sonidoPuerta);
         }
         else
         {

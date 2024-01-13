@@ -25,8 +25,6 @@ public class Inventario : MonoBehaviour
 
     public GameObject inventorymenu;
     public GameObject crafteoMenu;
-    public GameObject objeto;
-    public GameObject nota;
 
     public Sprite foto;
     public Sprite ganzua;
@@ -34,38 +32,11 @@ public class Inventario : MonoBehaviour
 
     public Crafteo crafteo;
 
-    public AlmacenNotas almacen;
-
-    public static Inventario instancia;
-
-    private List<int> numeroObjeto;
-    private List<int> numeroNota;
-
-    
-
-    private void Start()
-    {
-        if (instancia == null)  //Guarda el Canvas del inventario y evita que se dupliquen el resto
-        {
-            instancia = this;
-            if (!gameObject.name.Equals("Canvas"))
-            {
-                GameObject.DontDestroyOnLoad(this.gameObject);
-            }
-        }
-        else
-        {
-            if (!gameObject.name.Equals("Canvas"))
-            {
-                Destroy(gameObject);
-            }
-        }
-    }
     void Update()
     {
-        if (Input.GetButtonDown("Inventario") && inventarioActivo)  //Abrir y cerrar el inventario
+        if (Input.GetButtonDown("Inventario") && inventarioActivo)  //Comprueba si pulsas la tecla para abrir el inventario y este está activo
         {
-            if (crafteo.crafteoActivo)
+            if (crafteo.crafteoActivo) //Si el crafteo está activo devuelve los objetos que estén en el inventario al crafteo y cierra el crafteo, dejando el inventario activo
             {
                 if (crafteo.slotdeitems[0].isfull)
                 {
@@ -80,160 +51,19 @@ public class Inventario : MonoBehaviour
                 crafteoMenu.SetActive(false);
                 crafteo.crafteoActivo = false;
             }
-            else
+            else //Si el crafteo está desactivado, desactiva también el inventario
             {
                 inventorymenu.SetActive(false);
                 inventarioActivo = false;
             }
         }
-        else if (Input.GetButtonDown("Inventario") && !inventarioActivo)
+        else if (Input.GetButtonDown("Inventario") && !inventarioActivo) //Si pulsas la tecla para abrir el inventario y este está desactivado, lo activa
         {
             inventorymenu.SetActive(true);
             inventarioActivo = true;
         }
     }
 
-    public void ComprobarFotosRepetidas()
-    {
-        numeroNota = new List<int>();
-        nota = GameObject.Find("Notas");
-
-        for (int i = 0; i < nota.transform.childCount; i++)
-        {
-            if (nota.transform.GetChild(i).name.Contains("P"))
-            {
-                switch (nota.transform.GetChild(i).name)
-                {
-                    case "P0":
-                        if (almacen.notasPosesiones[0]) { numeroNota.Add(i); }
-                        break;
-                    case "P1":
-                        if (almacen.notasPosesiones[1]) { numeroNota.Add(i); }
-                        break;
-                    case "P2":
-                        if (almacen.notasPosesiones[2]) { numeroNota.Add(i); }
-                        break;
-                    case "P3":
-                        if (almacen.notasPosesiones[3]) { numeroNota.Add(i); }
-                        break;
-                    case "P4":
-                        if (almacen.notasPosesiones[4]) { numeroNota.Add(i); }
-                        break;
-                    case "P5":
-                        if (almacen.notasPosesiones[5]) { numeroNota.Add(i); }
-                        break;
-                }
-            }
-            else if (nota.transform.GetChild(i).name.Contains("N"))
-            {
-                switch (nota.transform.GetChild(i).name)
-                {
-                    case "N0":
-                        if (almacen.notasNarrativa[0]) { numeroNota.Add(i); }
-                        break;
-                    case "N1":
-                        if (almacen.notasNarrativa[1]) { numeroNota.Add(i); }
-                        break;
-                    case "N2":
-                        if (almacen.notasNarrativa[2]) { numeroNota.Add(i); }
-                        break;
-                    case "N3":
-                        if (almacen.notasNarrativa[3]) { numeroNota.Add(i); }
-                        break;
-                    case "N4":
-                        if (almacen.notasNarrativa[4]) { numeroNota.Add(i); }
-                        break;
-                }
-            }
-        }
-        for (int i = 0; i < numeroNota.Count; i++)
-        {
-            nota.transform.GetChild(numeroNota[i]).gameObject.SetActive(false);
-        }
-
-        if (SceneManager.GetActiveScene().name.Equals("Baul") || SceneManager.GetActiveScene().name.Equals("cajon"))
-        {
-            nota.SetActive(false);
-        }
-    }
-
-    public void ComprobarRepetidos()    //Comprueba si los objetos que están en la escena ya han sido recogidos y los elimina
-    {
-        numeroObjeto = new List<int>();
-        objeto = GameObject.Find("Objetos");
-
-        for (int i = 0; i < objeto.transform.childCount; i++)
-        {
-            for (int j = 0; j < tamañoMaximo; j++)
-            {
-                if ((objeto.transform.GetChild(i).CompareTag("foto") && crafteo.fotoCrafteada)      //Comprueba si la foto o la ganzua han sido crafteadas
-                    || (objeto.transform.GetChild(i).CompareTag("ganzua") && crafteo.ganzuaCrafteada))
-                {
-                    numeroObjeto.Add(i);
-                }
-                if (objeto.transform.GetChild(i).name.Equals(slotdeitems[j].itemName))
-                {
-                    numeroObjeto.Add(i);
-                }
-                if (objeto.transform.GetChild(i).name.Equals("LinternaObjeto"))
-                {
-                    if (linterna)
-                    {
-                        numeroObjeto.Add(i);
-                    }
-                }
-                if (objeto.transform.GetChild(i).name.Equals("Coche 1") && cocheUsado)
-                {
-                    numeroObjeto.Add(i);
-                }
-                if (objeto.transform.GetChild(i).name.Equals("Comic 1") && comicUsado)
-                {
-                    numeroObjeto.Add(i);
-                }
-                if (objeto.transform.GetChild(i).name.Equals("Barrena") && barrena)
-                {
-                    numeroObjeto.Add(i);
-                }
-                if (objeto.transform.GetChild(i).name.Contains("Fusible"))
-                {
-                    if (objeto.transform.GetChild(i).name.Contains("Azul") && fusibleAzul)
-                    {
-                        numeroObjeto.Add(i);
-                    }
-                    else if (objeto.transform.GetChild(i).name.Contains("Rojo") && fusibleRojo)
-                    {
-                        numeroObjeto.Add(i);
-                    }
-                    else if (objeto.transform.GetChild(i).name.Contains("Verde") && fusibleVerde)
-                    {
-                        numeroObjeto.Add(i);
-                    }
-                    else if (objeto.transform.GetChild(i).name.Contains("Blanco") && fusibleBlanco)
-                    {
-                        numeroObjeto.Add(i);
-                    }
-                    else if (objeto.transform.GetChild(i).name.Contains("Negro") && fusibleNegro)
-                    {
-                        numeroObjeto.Add(i);
-                    }
-                    else if (objeto.transform.GetChild(i).name.Contains("Amarillo") && fusibleAmarillo)
-                    {
-                        numeroObjeto.Add(i);
-                    }
-                }
-            }
-        }
-
-        for (int i = 0; i < numeroObjeto.Count; i++)
-        {
-            objeto.transform.GetChild(numeroObjeto[i]).gameObject.SetActive(false);
-        }
-
-        if (SceneManager.GetActiveScene().name.Equals("Baul") || SceneManager.GetActiveScene().name.Equals("cajon"))
-        {
-            objeto.SetActive(false);
-        }
-    }
     public void AddItem(string itemname, Sprite itemsprite, string valorTag)    //Añade items del entorno al inventario
     {
         recolectado = false;
@@ -248,7 +78,6 @@ public class Inventario : MonoBehaviour
                     recolectado = true;
                     return;
                 }
-                // HACER UN ELSE QUE HAGA UNA PEQUEÑA ANIMACION O ALGO QUE INDIQUE AL USUARIO QUE EL CRAFTEO ESTÁ LLENO
             }
         }
     }
@@ -294,14 +123,6 @@ public class Inventario : MonoBehaviour
             }
         }
     }
-    public void DeselectAllSlots()  //Deselecciona los slots del inventario
-    {
-        for (int i = 0; i < tamañoMaximo; i++)
-        {
-            slotdeitems[i].selectedshader.SetActive(false);
-            slotdeitems[i].thisItemSelected = false;
-        }
-    }
 
     public bool InventarioLleno()
     {
@@ -312,7 +133,15 @@ public class Inventario : MonoBehaviour
                 return false;
             }
         }
-
         return true;
+    }
+
+    public void DeselectAllSlots()  //Deselecciona los slots del inventario
+    {
+        for (int i = 0; i < tamañoMaximo; i++)
+        {
+            slotdeitems[i].selectedshader.SetActive(false);
+            slotdeitems[i].thisItemSelected = false;
+        }
     }
 }

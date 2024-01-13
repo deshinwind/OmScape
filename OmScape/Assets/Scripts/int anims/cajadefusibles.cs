@@ -60,6 +60,5 @@ public class cajadefusibles : MonoBehaviour
     void Animacion()
     {
         animator.SetTrigger("cajaclick");
-        GameObject.Find("caja de fusibles").GetComponent<SpriteRenderer>().sprite = bufandasprite;
     }
 }

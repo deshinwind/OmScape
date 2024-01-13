@@ -42,7 +42,6 @@ public class Crafteable : MonoBehaviour, IPointerClickHandler
             }
         }
     }
-
     public void OnPointerClick(PointerEventData eventData)
     {
         if (eventData.button == PointerEventData.InputButton.Left)
@@ -51,7 +50,7 @@ public class Crafteable : MonoBehaviour, IPointerClickHandler
             {
                 if (SceneManager.GetActiveScene().name.Equals("panel"))
                 {
-                    if (slot.name.Contains("Escaner"))
+                    if (slot.name.Contains("Escaner") && slot.isfull)
                     {
                         EnviarAInventario();
                     }
@@ -70,7 +69,7 @@ public class Crafteable : MonoBehaviour, IPointerClickHandler
 
     public void EnviarAInventario()
     {
-        GameObject.Find("Canvas2").GetComponent<Inventario>().AddItemFromCraft(gameObject.GetComponent<slotdeitems>().itemName, slot.itemsprite, gameObject.tag);
+        GameObject.Find("Inventario").GetComponent<Inventario>().AddItemFromCraft(gameObject.GetComponent<slotdeitems>().itemName, slot.itemsprite, gameObject.tag);
         slot.RemoveItem();
     }
 

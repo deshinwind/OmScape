@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 20446785}
   - component: {fileID: 20446784}
   m_Layer: 0
-  m_Name: Coche 1
+  m_Name: Coche1
   m_TagString: Sensor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -222,7 +222,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemname: 
+  inventario: {fileID: 0}
   spriteObjeto: {fileID: 21300000, guid: 2cdbc86aa7728b04f90d984541e43bb1, type: 3}
+  mostrador: {fileID: 0}
+  sonidoObjeto: {fileID: 8300000, guid: d912fdf0da2436b439421b81948e6f23, type: 3}
 --- !u!61 &20446785
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -979,6 +982,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   almacen: {fileID: 0}
+  sonidoHojas: {fileID: 8300000, guid: 24cc1d2d946ef7f4c95d1ccbe6736080, type: 3}
 --- !u!212 &735969936
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1668,7 +1672,7 @@ MonoBehaviour:
   - 2.42
   - 1
   posicionBotones: []
-  cam: {fileID: 1277767961}
+  cam: {fileID: 0}
   botonesPanel: {fileID: 1880244675}
   botones:
   - {fileID: 1400161180}
@@ -1679,6 +1683,7 @@ MonoBehaviour:
   objetos: []
   notas: []
   objetosActivos: {fileID: 0}
+  speed: 0.1
 --- !u!1 &1249118836
 GameObject:
   m_ObjectHideFlags: 0
@@ -1692,7 +1697,7 @@ GameObject:
   - component: {fileID: 1249118842}
   - component: {fileID: 1249118840}
   m_Layer: 0
-  m_Name: Coche 3
+  m_Name: Coche3
   m_TagString: NoCraft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1778,7 +1783,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemname: 
+  inventario: {fileID: 0}
   spriteObjeto: {fileID: 21300000, guid: 2a454dfdfa39a224a8c466488018b891, type: 3}
+  mostrador: {fileID: 0}
+  sonidoObjeto: {fileID: 8300000, guid: d912fdf0da2436b439421b81948e6f23, type: 3}
 --- !u!61 &1249118842
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1824,98 +1832,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 7.26, y: 2.18}
   m_EdgeRadius: 0
---- !u!1 &1277767959
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1277767962}
-  - component: {fileID: 1277767961}
-  - component: {fileID: 1277767960}
-  m_Layer: 0
-  m_Name: Main Camera
-  m_TagString: MainCamera
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!81 &1277767960
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1277767959}
-  m_Enabled: 1
---- !u!20 &1277767961
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1277767959}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
-  m_projectionMatrixMode: 1
-  m_GateFitMode: 2
-  m_FOVAxisMode: 0
-  m_Iso: 200
-  m_ShutterSpeed: 0.005
-  m_Aperture: 16
-  m_FocusDistance: 10
-  m_FocalLength: 50
-  m_BladeCount: 5
-  m_Curvature: {x: 2, y: 11}
-  m_BarrelClipping: 0.25
-  m_Anamorphism: 0
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 1
-  orthographic size: 5
-  m_Depth: -1
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
---- !u!4 &1277767962
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1277767959}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1284924686
 GameObject:
   m_ObjectHideFlags: 0
@@ -2273,7 +2189,7 @@ GameObject:
   - component: {fileID: 1506543467}
   - component: {fileID: 1506543465}
   m_Layer: 0
-  m_Name: Coche 2
+  m_Name: Coche2
   m_TagString: NoCraft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2359,7 +2275,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemname: 
+  inventario: {fileID: 0}
   spriteObjeto: {fileID: 21300000, guid: 4912d954060bb5e4b8c5e02ac66c4861, type: 3}
+  mostrador: {fileID: 0}
+  sonidoObjeto: {fileID: 8300000, guid: d912fdf0da2436b439421b81948e6f23, type: 3}
 --- !u!61 &1506543467
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2437,7 +2356,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemname: 
+  inventario: {fileID: 0}
   spriteObjeto: {fileID: 0}
+  mostrador: {fileID: 0}
+  sonidoObjeto: {fileID: 0}
 --- !u!61 &1522156528
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2836,6 +2758,7 @@ GameObject:
   - component: {fileID: 1952850239}
   - component: {fileID: 1952850238}
   - component: {fileID: 1952850242}
+  - component: {fileID: 1952850243}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2893,7 +2816,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 1
-  m_Camera: {fileID: 1277767961}
+  m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -2939,16 +2862,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3ecfd29ec5413a42a41e3c8240d7832, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fin: 0
   panel: {fileID: 0}
   activos: {fileID: 0}
+--- !u!114 &1952850243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952850237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d01a23dc74802b4696507bcb15f621e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1277767962}
-  - {fileID: 1284924689}
   - {fileID: 1187341581}
   - {fileID: 1952850241}
+  - {fileID: 1284924689}
   - {fileID: 1020556446}
   - {fileID: 1797795253}
   - {fileID: 1903154130}

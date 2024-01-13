@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Baul : MonoBehaviour
 {
@@ -21,8 +22,11 @@ public class Baul : MonoBehaviour
     }
     void Start()
     {
+        Camera.main.orthographicSize = 5;
+        Camera.main.transform.position = Vector2.zero;
+
         activos = GameObject.Find("Canvas2").GetComponent<ObjetosActivos>();
-        inventario = GameObject.Find("Canvas2").GetComponent<Inventario>();
+        inventario = GameObject.Find("Inventario").GetComponent<Inventario>();
         if (inventario.dobleFondo)
         {
             objetos.SetActive(true);
@@ -43,7 +47,6 @@ public class Baul : MonoBehaviour
     void Animacion()
     {
         animator.SetTrigger("baul");
-        GameObject.Find("baul").GetComponent<SpriteRenderer>().sprite = baulsprite;
     }
 
     public void ActivarObjetos()

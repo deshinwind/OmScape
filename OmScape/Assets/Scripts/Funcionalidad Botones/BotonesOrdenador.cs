@@ -122,8 +122,6 @@ public class BotonesOrdenador : MonoBehaviour
         notaActiva = true;
         nota = EventSystem.current.currentSelectedGameObject.name;
 
-        print(nota);
-
         switch (nota)
         {
             case "P0":

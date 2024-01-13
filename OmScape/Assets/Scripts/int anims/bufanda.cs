@@ -37,6 +37,5 @@ public class bufanda : MonoBehaviour
     void Animacion()
     {
         animator.SetTrigger("estapulsadabufanda");
-        GameObject.Find("bufanda").GetComponent<SpriteRenderer>().sprite = bufandasprite;
     }
 }

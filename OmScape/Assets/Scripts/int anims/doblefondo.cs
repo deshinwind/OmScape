@@ -26,7 +26,7 @@ public class doblefondo : MonoBehaviour
     private void Start()
     {
         activos = GameObject.Find("Canvas2").GetComponent<ObjetosActivos>();
-        inventario = GameObject.Find("Canvas2").GetComponent<Inventario>();
+        inventario = GameObject.Find("Inventario").GetComponent<Inventario>();
         if (inventario.dobleFondo)
         {
             objetos.SetActive(true);
@@ -66,7 +66,6 @@ public class doblefondo : MonoBehaviour
     void AnimacionCajon()
     {
         animator.SetTrigger("doblefondotrigger");
-        GameObject.Find("doble").GetComponent<SpriteRenderer>().sprite = doblefondosprite;
     }
 
     public void ActivarObjetos()

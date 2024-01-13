@@ -8,6 +8,10 @@ public class Puntero : MonoBehaviour
 
     public GameObject objeto;
 
+    public AlmacenObjetos almacenObjetos;
+
+    public Crafteo crafteo;
+
     void Update()
     {
         if (Input.GetMouseButtonDown(0) && Time.timeScale == 1)
@@ -19,74 +23,71 @@ public class Puntero : MonoBehaviour
     public void Raycasteo()
     {
         RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
-
-        if (hit.collider != null)
+        if (!crafteo.crafteoActivo)
         {
-            ComprobarNombreObjeto(hit);
-
-            if (correcto)
+            if (hit.collider != null)
             {
                 objeto = GameObject.Find(hit.transform.name);
-
-                if (objeto.name.Equals("Bloqueo"))
+                if (ComprobarNombreObjeto(hit))
                 {
-                    print("juego pausado por puntero");
-                    Time.timeScale = 0;
-                }
-                else if (objeto.name.Equals("NotaFalsa"))
-                {
-                    objeto.GetComponent<Notas>().MostrarNotaFalsa();
-                }
-                else if (objeto.name.Length == 2)
-                {
-                    objeto.GetComponent<Notas>().EnviarAlAlmacen();
-                }
-                else if (objeto.name.Equals("LinternaObjeto"))
-                {
-                    objeto.GetComponent<recolectable>().Linterna();
-                }
-                else if (objeto.name.Equals("doble"))
-                {
-                    objeto.GetComponent<doblefondo>().Abrir();
-                }
-                else if (objeto.name.Equals("Sensor"))
-                {
-                    GameObject.Find("Canvas").GetComponent<ButtonFuncionality>().ButtonSensor();
-                }
-                else if (objeto.name.Equals("bufanda"))
-                {
-                    objeto.GetComponent<bufanda>().Abrir();
-                }
-                else if (objeto.name.Equals("caja de fusibles"))
-                {
-                    objeto.GetComponent<cajadefusibles>().Abrir();
-                }
-                else if (objeto.name.Equals("baul"))
-                {
-                    objeto.GetComponent<Baul>().Abrir();
-                }
-                else if (objeto.name.Equals("candado"))
-                {
-                    objeto.GetComponent<candado>().Abrir();
+                    if (objeto.name.Equals("Bloqueo"))
+                    {
+                    }
+                    else if (objeto.name.Equals("LinternaObjeto"))
+                    {
+                        objeto.GetComponent<recolectable>().Linterna();
+                        almacenObjetos.RecogerObjeto(objeto.name);
+                    }
+                    else if (objeto.name.Equals("CajonDoble"))
+                    {
+                        objeto.GetComponent<doblefondo>().Abrir();
+                    }
+                    else if (objeto.name.Equals("Sensor"))
+                    {
+                        GameObject.Find("Canvas").GetComponent<ButtonFuncionality>().ButtonSensor();
+                    }
+                    else if (objeto.name.Equals("Bufanda"))
+                    {
+                        objeto.GetComponent<bufanda>().Abrir();
+                    }
+                    else if (objeto.name.Equals("CajaDeFusibles"))
+                    {
+                        objeto.GetComponent<cajadefusibles>().Abrir();
+                    }
+                    else if (objeto.name.Equals("Baul"))
+                    {
+                        objeto.GetComponent<Baul>().Abrir();
+                    }
+                    else if (objeto.name.Equals("Candado"))
+                    {
+                        objeto.GetComponent<candado>().Abrir();
+                    }
+                    else
+                    {
+                        objeto.GetComponent<recolectable>().EnviarAInventario();
+                        if (GameObject.Find("Inventario").GetComponent<Inventario>().recolectado)
+                        {
+                            almacenObjetos.RecogerObjeto(objeto.name);
+                        }
+                    }
                 }
                 else
                 {
-                    objeto.GetComponent<recolectable>().EnviarAInventario();
+                    objeto.GetComponent<Notas>().EnviarAlAlmacen();
                 }
             }
         }
     }
 
-    private void ComprobarNombreObjeto(RaycastHit2D hit)
+    private bool ComprobarNombreObjeto(RaycastHit2D hit)
     {
-        correcto = false;
-
         for (int i = 0; i < listaObjetos.Length; i++)
         {
             if (listaObjetos[i].Equals(hit.transform.name))
             {
-                correcto = true;
+                return true;
             }
         }
+        return false;
     }
 }

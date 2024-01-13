@@ -20,7 +20,7 @@ public class AlmacenFusibles : MonoBehaviour
     {
         zoomController = GameObject.Find("Zoom").GetComponent<CameraZoomController>();
         activos = GameObject.Find("Canvas2").GetComponent<ObjetosActivos>();
-        inventario = GameObject.Find("Canvas2").GetComponent<Inventario>();
+        inventario = GameObject.Find("Inventario").GetComponent<Inventario>();
     }
 
     void Update()
@@ -32,7 +32,7 @@ public class AlmacenFusibles : MonoBehaviour
             {
                 if (desactivada)
                 {
-                    GameObject.Find("puerta").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("sprites/interfaz/vacio");
+                    GameObject.Find("Puerta").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("sprites/interfaz/vacio");
                     desactivada = false;
                 }
             }

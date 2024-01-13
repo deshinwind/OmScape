@@ -23,7 +23,7 @@ public class candado : MonoBehaviour
     void Start()
     {
         activos = GameObject.Find("Canvas2").GetComponent<ObjetosActivos>();
-        inventario = GameObject.Find("Canvas2").GetComponent<Inventario>();
+        inventario = GameObject.Find("Inventario").GetComponent<Inventario>();
     }
 
     void Update()
@@ -61,6 +61,5 @@ public class candado : MonoBehaviour
     void Animacion()
     {
         animator.SetTrigger("candadotrigger");
-        GameObject.Find("candado").GetComponent<SpriteRenderer>().sprite = candadosprite;
     }
 }

@@ -172,7 +172,7 @@ GameObject:
   - component: {fileID: 572233030}
   - component: {fileID: 572233031}
   m_Layer: 0
-  m_Name: doble
+  m_Name: CajonDoble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -260,7 +260,7 @@ Transform:
   m_GameObject: {fileID: 572233025}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.017, y: 0.1032, z: 0}
+  m_LocalPosition: {x: 0.017, y: 0.1032, z: 1}
   m_LocalScale: {x: 0.92633295, y: 0.919, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -340,6 +340,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3ecfd29ec5413a42a41e3c8240d7832, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fin: 0
+  fundido: {fileID: 0}
   panel: {fileID: 0}
   activos: {fileID: 0}
 --- !u!1 &608062635
@@ -355,12 +357,12 @@ GameObject:
   - component: {fileID: 608062639}
   - component: {fileID: 608062637}
   m_Layer: 0
-  m_Name: Fusible Blanco
+  m_Name: FusibleBlanco
   m_TagString: NoCraft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &608062636
 Transform:
   m_ObjectHideFlags: 0
@@ -370,7 +372,7 @@ Transform:
   m_GameObject: {fileID: 608062635}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.086455114, w: 0.99625576}
-  m_LocalPosition: {x: -5.01, y: -4.2081, z: 0}
+  m_LocalPosition: {x: -5.01, y: -4.2081, z: 1}
   m_LocalScale: {x: 0.21198572, y: 0.21198572, z: 0.21198572}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -389,7 +391,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemname: 
+  inventario: {fileID: 0}
   spriteObjeto: {fileID: 21300000, guid: 3a6c8f6c241b6e941815b5386577db82, type: 3}
+  mostrador: {fileID: 0}
+  sonidoObjeto: {fileID: 8300000, guid: d912fdf0da2436b439421b81948e6f23, type: 3}
 --- !u!212 &608062638
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -568,7 +573,7 @@ GameObject:
   - component: {fileID: 677009691}
   - component: {fileID: 677009689}
   m_Layer: 0
-  m_Name: Fusible Negro
+  m_Name: FusibleNegro
   m_TagString: NoCraft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -583,7 +588,7 @@ Transform:
   m_GameObject: {fileID: 677009687}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.1912034, w: 0.98155046}
-  m_LocalPosition: {x: -1.1, y: -3.97, z: 0}
+  m_LocalPosition: {x: -1.1, y: -3.97, z: 1}
   m_LocalScale: {x: 0.21198572, y: 0.21198572, z: 0.21198572}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -602,7 +607,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemname: 
+  inventario: {fileID: 0}
   spriteObjeto: {fileID: 21300000, guid: 9091b20ef60763040b47d982d910dae9, type: 3}
+  mostrador: {fileID: 0}
+  sonidoObjeto: {fileID: 8300000, guid: d912fdf0da2436b439421b81948e6f23, type: 3}
 --- !u!212 &677009690
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -713,7 +721,7 @@ GameObject:
   - component: {fileID: 805163421}
   - component: {fileID: 805163419}
   m_Layer: 0
-  m_Name: Fusible Rojo
+  m_Name: FusibleRojo
   m_TagString: NoCraft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -728,7 +736,7 @@ Transform:
   m_GameObject: {fileID: 805163417}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.112127684, w: -0.9936938}
-  m_LocalPosition: {x: 2.96, y: -4.81, z: 0}
+  m_LocalPosition: {x: 2.96, y: -4.81, z: 1}
   m_LocalScale: {x: 0.20365468, y: 0.21198572, z: 0.21198572}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -747,7 +755,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemname: 
+  inventario: {fileID: 0}
   spriteObjeto: {fileID: 21300000, guid: 378df9c93941a294393439fb1e10ec53, type: 3}
+  mostrador: {fileID: 0}
+  sonidoObjeto: {fileID: 8300000, guid: d912fdf0da2436b439421b81948e6f23, type: 3}
 --- !u!212 &805163420
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -858,7 +869,7 @@ GameObject:
   - component: {fileID: 932450654}
   - component: {fileID: 932450652}
   m_Layer: 0
-  m_Name: Fusible Verde
+  m_Name: FusibleVerde
   m_TagString: NoCraft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -873,7 +884,7 @@ Transform:
   m_GameObject: {fileID: 932450650}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.090403356, w: -0.9959053}
-  m_LocalPosition: {x: -3.15, y: -4.36, z: 0}
+  m_LocalPosition: {x: -3.15, y: -4.36, z: 1}
   m_LocalScale: {x: 0.21198572, y: 0.21198572, z: 0.21198572}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -892,7 +903,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemname: 
+  inventario: {fileID: 0}
   spriteObjeto: {fileID: 21300000, guid: a3a12bc764787744781ed84ea2aafb64, type: 3}
+  mostrador: {fileID: 0}
+  sonidoObjeto: {fileID: 8300000, guid: d912fdf0da2436b439421b81948e6f23, type: 3}
 --- !u!212 &932450653
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1184,7 +1198,7 @@ Transform:
   m_GameObject: {fileID: 1154679555}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.6047, y: -4.58, z: 0}
+  m_LocalPosition: {x: 3.6047, y: -4.58, z: 1}
   m_LocalScale: {x: 0.3369937, y: 0.3369937, z: 0.3369937}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1255,6 +1269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   almacen: {fileID: 0}
+  sonidoHojas: {fileID: 8300000, guid: 24cc1d2d946ef7f4c95d1ccbe6736080, type: 3}
 --- !u!61 &1154679560
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1350,7 +1365,7 @@ GameObject:
   - component: {fileID: 1427482516}
   - component: {fileID: 1427482514}
   m_Layer: 0
-  m_Name: Fusible Azul
+  m_Name: FusibleAzul
   m_TagString: NoCraft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1365,7 +1380,7 @@ Transform:
   m_GameObject: {fileID: 1427482512}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.15, y: -4.2081, z: 0}
+  m_LocalPosition: {x: -6.15, y: -4.2081, z: 1}
   m_LocalScale: {x: 0.21198572, y: 0.21198572, z: 0.21198572}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1384,7 +1399,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemname: 
+  inventario: {fileID: 0}
   spriteObjeto: {fileID: 21300000, guid: 05ffaa5cadb105e4e9327fbb47397c08, type: 3}
+  mostrador: {fileID: 0}
+  sonidoObjeto: {fileID: 8300000, guid: d912fdf0da2436b439421b81948e6f23, type: 3}
 --- !u!212 &1427482515
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1482,98 +1500,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.49, y: 10.68}
   m_EdgeRadius: 0
---- !u!1 &1455406079
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1455406082}
-  - component: {fileID: 1455406081}
-  - component: {fileID: 1455406080}
-  m_Layer: 0
-  m_Name: Main Camera
-  m_TagString: MainCamera
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!81 &1455406080
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1455406079}
-  m_Enabled: 1
---- !u!20 &1455406081
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1455406079}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 1
-  m_GateFitMode: 2
-  m_FOVAxisMode: 0
-  m_Iso: 200
-  m_ShutterSpeed: 0.005
-  m_Aperture: 16
-  m_FocusDistance: 10
-  m_FocalLength: 50
-  m_BladeCount: 5
-  m_Curvature: {x: 2, y: 11}
-  m_BarrelClipping: 0.25
-  m_Anamorphism: 0
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 1
-  orthographic size: 5
-  m_Depth: -1
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
---- !u!4 &1455406082
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1455406079}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1550454879
 GameObject:
   m_ObjectHideFlags: 0
@@ -1602,7 +1528,7 @@ Transform:
   m_GameObject: {fileID: 1550454879}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.30615124, w: -0.951983}
-  m_LocalPosition: {x: 2.0312, y: -4.4607, z: 0}
+  m_LocalPosition: {x: 2.0312, y: -4.4607, z: 1}
   m_LocalScale: {x: 0.5445481, y: 0.40442613, z: 0.3369937}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1673,6 +1599,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   almacen: {fileID: 0}
+  sonidoHojas: {fileID: 8300000, guid: 24cc1d2d946ef7f4c95d1ccbe6736080, type: 3}
 --- !u!61 &1550454884
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1747,6 +1674,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3ecfd29ec5413a42a41e3c8240d7832, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fin: 0
+  fundido: {fileID: 0}
   panel: {fileID: 0}
   activos: {fileID: 0}
 --- !u!4 &1611276228
@@ -1777,12 +1706,12 @@ GameObject:
   - component: {fileID: 1951238026}
   - component: {fileID: 1951238024}
   m_Layer: 0
-  m_Name: Fusible Amarillo
+  m_Name: FusibleAmarillo
   m_TagString: NoCraft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1951238023
 Transform:
   m_ObjectHideFlags: 0
@@ -1792,7 +1721,7 @@ Transform:
   m_GameObject: {fileID: 1951238022}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.13347791, w: -0.9910518}
-  m_LocalPosition: {x: 0.26999998, y: -4.3, z: 0}
+  m_LocalPosition: {x: 0.26999998, y: -4.3, z: 1}
   m_LocalScale: {x: 0.21198572, y: 0.21198572, z: 0.21198572}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1811,7 +1740,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemname: 
+  inventario: {fileID: 0}
   spriteObjeto: {fileID: 21300000, guid: 72d72da28efe513488dbf14a89b9a302, type: 3}
+  mostrador: {fileID: 0}
+  sonidoObjeto: {fileID: 8300000, guid: d912fdf0da2436b439421b81948e6f23, type: 3}
 --- !u!212 &1951238025
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1937,7 +1869,7 @@ Transform:
   m_GameObject: {fileID: 2034061462}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.3283, y: -4.0683, z: 0}
+  m_LocalPosition: {x: -4.3283, y: -4.0683, z: 1}
   m_LocalScale: {x: 0.5964114, y: 0.50555795, z: 0.3369937}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2008,6 +1940,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   almacen: {fileID: 0}
+  sonidoHojas: {fileID: 8300000, guid: 24cc1d2d946ef7f4c95d1ccbe6736080, type: 3}
 --- !u!61 &2034061467
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2057,7 +1990,6 @@ BoxCollider2D:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1455406082}
   - {fileID: 1139965811}
   - {fileID: 646529996}
   - {fileID: 572233028}

@@ -29,7 +29,7 @@ public class slotdeitems : MonoBehaviour, IPointerClickHandler
 
     private void Start()
     {
-        inventario = GameObject.Find("Canvas2").GetComponent<Inventario>();
+        inventario = GameObject.Find("Inventario").GetComponent<Inventario>();
         crafteo = GameObject.Find("Canvas2").GetComponent<Crafteo>();
 
         if (SceneManager.GetActiveScene().name.Equals("panel"))
@@ -56,9 +56,15 @@ public class slotdeitems : MonoBehaviour, IPointerClickHandler
     }
     public void OnPointerClick(PointerEventData eventData)      //Detecta el click del raton
     {
-       if(eventData.button == PointerEventData.InputButton.Left)
+        if (eventData.button == PointerEventData.InputButton.Left)
         {
             OnLeftClick();
+        }
+
+        if (this.name.Contains("Crafteo") && this.isfull)
+        {
+            GameObject.Find("Inventario").GetComponent<Inventario>().AddItemFromCraft(gameObject.GetComponent<slotdeitems>().itemName, this.itemsprite, gameObject.tag);
+            this.RemoveItem();
         }
     }
     public void OnLeftClick()       //Selecciona el slot seleccionado (ya sea inventario o crafteo)

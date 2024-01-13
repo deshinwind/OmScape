@@ -59,4 +59,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Taller/cajon.unity
     guid: 06ce7dfd6027ebd43a55064f030fbd61
+  - enabled: 1
+    path: Assets/Scenes/menus/MenuPausa.unity
+    guid: 92d532129dca85143a02cd4f36e2a5ae
   m_configObjects: {}

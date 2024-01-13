@@ -26,45 +26,29 @@ public class CameraZoomController : MonoBehaviour
     private int n = 0;
     private int numeroBotones;
 
-    private float speed = 0.1f;
+    public float speed = 0.1f;
     private float zoomDefault = 5;
 
     void Start()
     {
         cam = Camera.main;
         numeroBotones = botones.Length;
-        PosicionBotones(numeroBotones);
+        PosicionBotones();
 
-        if (SceneManager.GetActiveScene().name.Equals("H2"))
+        objetosActivos = GameObject.Find("Canvas2").GetComponent<ObjetosActivos>(); //Quitar esta referenciacion y ponerla desde el inspector (CUANDO PONGA EL ZOOM GENERICO)
+
+        objetos = new GameObject[GameObject.Find("Objetos").transform.childCount];
+        notas = new GameObject[GameObject.Find("Notas").transform.childCount];
+
+        for (int i = 0; i < objetos.Length; i++)
         {
-            objetos = new GameObject[3];
-            objetos[0] = GameObject.Find("Coche 1");
-            objetos[1] = GameObject.Find("Coche 2");
-            objetos[2] = GameObject.Find("Coche 3");
-            notas = new GameObject[1];
-            notas[0] = GameObject.Find("N1");
-        }
-        else if (SceneManager.GetActiveScene().name.Equals("H3"))
-        {
-            objetos = new GameObject[1];
-            objetos[0] = GameObject.Find("Comic 1");
-        }
-        else if (SceneManager.GetActiveScene().name.Equals("H4"))
-        {
-            objetos = new GameObject[1];
-            objetos[0] = GameObject.Find("Clip");
-            notas = new GameObject[2];
-            notas[0] = GameObject.Find("P3");
-            notas[1] = GameObject.Find("N2");
-        }
-        else if (SceneManager.GetActiveScene().name.Equals("H1"))
-        {
-            objetosActivos = GameObject.Find("Canvas2").GetComponent<ObjetosActivos>();
-            objetos = new GameObject[2];
-            objetos[0] = GameObject.Find("bufanda");
-            objetos[1] = GameObject.Find("caja de fusibles");
+            objetos[i] = GameObject.Find("Objetos").transform.GetChild(i).gameObject;
         }
 
+        for (int i = 0; i < notas.Length; i++)
+        {
+            notas[i] = GameObject.Find("Notas").transform.GetChild(i).gameObject;
+        }
     }
 
     private void Update()
@@ -155,7 +139,10 @@ public class CameraZoomController : MonoBehaviour
 
     public void LateUpdate()
     {
-        Zoom();
+        if (!GameObject.Find("Bloqueo").GetComponent<BoxCollider2D>().enabled)
+        {
+            Zoom();
+        }
 
         if (!botonesPanel.activeInHierarchy)
         {
@@ -203,13 +190,16 @@ public class CameraZoomController : MonoBehaviour
 
     public void BotonPulsado()
     {
-        string nombre = EventSystem.current.currentSelectedGameObject.name;
-        for (int i = 0; i < botones.Length; i++)
+        if (!GameObject.Find("Bloqueo").GetComponent<BoxCollider2D>().enabled)
         {
-            if (botones[i].gameObject.name == nombre)
+            string nombre = EventSystem.current.currentSelectedGameObject.name;
+            for (int i = 0; i < botones.Length; i++)
             {
-                n = i + 1;
-                ZoomCheck();
+                if (botones[i].gameObject.name == nombre)
+                {
+                    n = i + 1;
+                    ZoomCheck();
+                }
             }
         }
     }
@@ -232,7 +222,7 @@ public class CameraZoomController : MonoBehaviour
         zoomCheck[0] = false;
     }
 
-    private void PosicionBotones(int numeroBotones)
+    private void PosicionBotones()
     {
         posicionBotones = new Vector2[numeroBotones];
         for (int i = 0; i < posicionBotones.Length; i++)

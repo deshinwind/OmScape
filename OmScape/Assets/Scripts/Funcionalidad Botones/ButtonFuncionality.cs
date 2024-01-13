@@ -8,21 +8,16 @@ public class ButtonFuncionality : MonoBehaviour
 {
     public bool fin;
 
-    public GameObject fundido;
+    //public GameObject fundido;
 
     public panel panel;
 
     public ObjetosActivos activos;
 
-    private float speed = 0.1f;
+    //private float speed = 0.1f;
 
     private void Start()
     {
-        if (gameObject.name.Equals("Canvas"))
-        {
-            FindObjectOfType<Inventario>().ComprobarRepetidos();       //Llamamos a la comprobación de los objetos repetidos al cambiar de escena
-            FindObjectOfType<Inventario>().ComprobarFotosRepetidas();
-        }
         activos = GameObject.Find("Canvas2").GetComponent<ObjetosActivos>();
         panel = GameObject.Find("Canvas2").GetComponent<panel>();
         panel.desactivada = true;
@@ -32,10 +27,10 @@ public class ButtonFuncionality : MonoBehaviour
     {
         if (fin)
         {
-            print("ey");
-            fundido.SetActive(true);
-            fundido.GetComponent<Image>().color = new Color(fundido.GetComponent<Image>().color.r, fundido.GetComponent<Image>().color.g, fundido.GetComponent<Image>().color.b , Mathf.Lerp(fundido.GetComponent<Image>().color.a, 1f, speed));
-            Invoke("Exit", 1f);
+            //fundido.SetActive(true);
+            //fundido.GetComponent<Image>().color = new Color(fundido.GetComponent<Image>().color.r, fundido.GetComponent<Image>().color.g, fundido.GetComponent<Image>().color.b , Mathf.Lerp(fundido.GetComponent<Image>().color.a, 1f, speed));
+            //Invoke("Exit", 1f);
+            Exit();
         }
 
         if (SceneManager.GetActiveScene().name.Equals("cajon"))
@@ -61,6 +56,16 @@ public class ButtonFuncionality : MonoBehaviour
         }
     }
 
+    public bool ComprobarBloqueador()
+    {
+        if (GameObject.Find("Bloqueo").GetComponent<BoxCollider2D>().enabled)
+        {
+            return true;
+        }
+        return false;
+    }
+
+
     public void Exit()
     {
         SceneManager.LoadScene("Exit");
@@ -68,95 +73,117 @@ public class ButtonFuncionality : MonoBehaviour
 
     public void ButtonExit()
     {
-        if (activos  != null)
+        if (!ComprobarBloqueador())
         {
-            if (activos.fusibles)
+            if (activos != null)
             {
-                fin = true;
+                if (activos.fusibles)
+                {
+                    fin = true;
+                }
             }
         }
     }
     public void mesapc()
     {
-        SceneManager.LoadScene("mesaPC");
+        if (!ComprobarBloqueador())
+            SceneManager.LoadScene("mesaPC");
     }
     public void ButtonH1()
     {
-        SceneManager.LoadScene("H1");
+        if (!ComprobarBloqueador())
+            SceneManager.LoadScene("H1");
     }
 
     public void ButtonH2()
     {
-        SceneManager.LoadScene("H2");
+        if (!ComprobarBloqueador())
+            SceneManager.LoadScene("H2");
     }
 
     public void ButtonH3()
     {
-        SceneManager.LoadScene("H3");
+        if (!ComprobarBloqueador())
+            SceneManager.LoadScene("H3");
     }
 
     public void ButtonH4()
     {
-        SceneManager.LoadScene("H4");
+        if (!ComprobarBloqueador())
+            SceneManager.LoadScene("H4");
     }
 
     public void ButtonT1()
     {
-        if (panel != null)
+        if (!ComprobarBloqueador())
         {
-            if (panel.escaneado)
+            if (panel != null)
             {
-                SceneManager.LoadScene("T1");
+                if (panel.escaneado)
+                {
+                    SceneManager.LoadScene("T1");
+                }
             }
         }
     }
 
     public void ButtonT2()
     {
-        SceneManager.LoadScene("T2");
+        if (!ComprobarBloqueador())
+            SceneManager.LoadScene("T2");
     }
 
     public void ButtonT3()
     {
-        SceneManager.LoadScene("T3");
+        if (!ComprobarBloqueador())
+            SceneManager.LoadScene("T3");
     }
 
     public void ButtonT4()
     {
-        SceneManager.LoadScene("T4");
+        if (!ComprobarBloqueador())
+            SceneManager.LoadScene("T4");
     }
 
     public void ButtonOrdenador()
     {
-        SceneManager.LoadScene("Ordenador");
+        if (!ComprobarBloqueador())
+            SceneManager.LoadScene("Ordenador");
     }
 
     public void ButtonBaul()
     {
-        SceneManager.LoadScene("Baul");
+        if (!ComprobarBloqueador())
+            SceneManager.LoadScene("Baul");
     }
 
     public void ButtonMesillaIzquierda()
     {
-        SceneManager.LoadScene("Mesita izquierda");
+        if (!ComprobarBloqueador())
+            SceneManager.LoadScene("Mesita izquierda");
     }
 
     public void ButtonMesillaDerecha()
     {
-        SceneManager.LoadScene("Mesita derecha");
+        if (!ComprobarBloqueador())
+            SceneManager.LoadScene("Mesita derecha");
     }
 
     public void ButtonEscritorioArriba()
     {
-        SceneManager.LoadScene("Escritorio arriba");
+        if (!ComprobarBloqueador())
+            SceneManager.LoadScene("Escritorio arriba");
     }
 
     public void ButtonSensor()
     {
-        SceneManager.LoadScene("panel");
+        if (!ComprobarBloqueador())
+            SceneManager.LoadScene("panel");
     }
     public void ButtonCajon()
     {
-        SceneManager.LoadScene("cajon");
+        if (!ComprobarBloqueador())
+            SceneManager.LoadScene("cajon");
     }
+    
 }
