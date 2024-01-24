@@ -26,7 +26,7 @@ public class AlmacenNotas : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && mostrandoNota && Time.timeScale == 0) 
+        if (Input.GetKeyDown(KeyCode.Space) && mostrandoNota && Time.timeScale == 0) 
         {
             pausa.GetComponent<BoxCollider2D>().enabled = false;
             Time.timeScale = 1;

@@ -31,7 +31,7 @@ public class MostrarObjetos : MonoBehaviour
         {
             Time.timeScale = 0;
             
-            if (Input.GetKeyDown(KeyCode.Escape))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 if (rotado == 0)
                 {
